@@ -1,0 +1,70 @@
+.footer
+	&__top
+		padding: 40px 0 50px
+	&__title
+		margin-bottom: 15px
+		font-size: 18px
+		font-weight: 500
+		color: $dark-gray
+	&__phone
+		.phone__left, .phone__right
+			padding-left: 0
+		.phone__left
+			margin-bottom: 20px
+		.phone__right
+			margin-bottom: 10px
+	&__schedule
+		margin-bottom: 20px
+		p
+			margin-bottom: 10px
+			font-size: 16px
+			&:last-child
+				margin-bottom: 0
+			strong
+				font-weight: 500
+				color: $cod-gray
+	&__address
+		p
+			margin-bottom: 10px
+			font-size: 16px
+			&:last-child
+				margin-bottom: 0
+		&-metro
+			font-weight: 500
+			&::before
+				content: 'M'
+				display: inline-block
+				width: 26px
+				height: 26px
+				margin-right: 5px
+				background-color: $accent
+				border-radius: 50%
+				font-size: 15px
+				font-weight: 400
+				color: #fff
+				line-height: 26px
+				text-align: center
+	&__pay
+		&-list
+			display: flex
+			align-items: center
+			margin-bottom: 45px
+			svg
+				fill: $gray-chateau
+				width: 37px
+				height: 37px
+				margin-right: 30px
+				&:last-child
+					margin-right: 0
+	&__bottom
+		padding: 13px 0
+		background-color: $dark-gray
+		color: #fff
+		&-content
+			display: flex
+			align-items: center
+	&__statistic
+		display: none
+		&--bottom
+			display: block
+			margin-left: auto

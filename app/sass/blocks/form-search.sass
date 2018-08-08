@@ -1,0 +1,43 @@
+.form-search-wrap
+	position: relative
+	margin-bottom: 30px
+
+.form-search
+	&__field
+		width: 100%
+		padding: 15px 170px 15px 20px
+		border: none
+		box-shadow: 0 1px 4px rgba(#000, 0.15)
+		border-radius: 0 3px 3px 3px
+		font-size: 16px
+		color: #131313
+		&::placeholder
+			font-size: 14px
+		&:focus
+			outline: none
+	&__vin
+		position: absolute
+		right: 75px
+		top: 15px
+		border-bottom: 1px dashed
+	&__btn
+		position: absolute
+		top: 6px
+		right: 6px
+		width: 44px
+		height: 44px
+		padding: 0
+		background-color: $accent
+		border-radius: 2px
+		border: none
+		cursor: pointer
+		+transition
+		&::before
+			content: '\e90a'
+			font-family: 'icomoon'
+			font-size: 18px
+			color: #fff
+			line-height: 44px
+		&:hover, &:focus
+			background-color: #e7463f
+			outline: none

@@ -1,0 +1,61 @@
+.news-tabs-wrap
+	margin-bottom: 60px
+	box-shadow: 0 1px 4px rgba(#000, 0.15)
+.news-tabs
+	position: relative
+	display: flex
+	align-items: flex-start
+	&__list
+		margin: 0
+		margin-bottom: 30px
+		padding: 0
+		list-style: none
+		flex: 0 0 320px
+		width: 320px
+		order: 1
+		&-item
+			a
+				display: flex
+				align-items: center
+				padding: 10px 15px
+				color: $dov-gray
+				img
+					margin-right: 15px
+					border: 1px solid transparent
+					+transition
+				&:hover
+					color: #fff
+					background-color: $accent
+					img
+						border: 1px solid $light-gray
+			&.active
+				a
+					color: #fff
+					background-color: $accent
+					img
+						border: 1px solid $light-gray
+	&__item
+		img
+			width: 100%
+	&__content
+		padding: 20px 30px 30px
+		h2
+			margin-bottom: 15px
+			font-size: 24px
+			font-weight: 400
+			line-height: 1.25
+			color: $dark-gray
+		p
+			margin-bottom: 20px
+			font-size: 16px
+			font-weight: 300
+	&__date
+		padding-left: 28px
+		color: $silver-sand
+		&::before
+			content: ''
+	&__all
+		position: absolute
+		right: 198px
+		bottom: 100px
+		font-size: 16px

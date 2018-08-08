@@ -1,0 +1,70 @@
+.phone
+	&__left, &__right
+		position: relative
+		padding-left: 55px
+		i
+			position: absolute
+			left: 0
+			top: 10px
+			font-size: 40px
+			color: #e2e6e6
+	&__tel
+		font-size: 24px
+		font-weight: 700
+		color: $dark-gray
+		span
+			font-weight: 400
+		&--label
+			position: relative
+			&::before
+				content: '24/7'
+				position: absolute
+				top: -20px
+				right: -15px
+				padding: 4px 5px
+				font-size: 12px
+				color: #fff
+				line-height: 1
+				background: #ca332c
+				border-radius: 6px
+	&__callback
+		position: relative
+		font-weight: 300
+		color: $accent
+		border-bottom: 1px dashed
+		&:hover
+			color: $accent
+			border-color: transparent
+	&__email
+		font-size: 16px
+		font-weight: 300
+	&__note
+		margin: 0
+		font-weight: 300
+		color: #868686
+	&__messenger
+		margin: 0
+		padding: 0
+		list-style: none
+		display: flex
+		li
+			margin-right: 17px
+			text-align: center
+			+transition
+			&:last-child
+				margin-right: 0
+			a
+				display: block
+				+size(30px)
+			i
+				font-size: 18px
+				color: #fff
+				line-height: 30px
+		&-viber
+			background-color: $affair
+			&:hover
+				background-color: lighten($affair, 10%)
+		&-whatsapp
+			background-color: $meadow
+			&:hover
+				background-color: lighten($meadow, 10%)

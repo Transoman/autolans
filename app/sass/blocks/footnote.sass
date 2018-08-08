@@ -1,0 +1,21 @@
+.footnote
+	padding: 50px 0
+	border-bottom: 1px solid $light-gray
+	&__text
+		position: relative
+		padding-left: 95px
+		&::before
+			content: ''
+			position: absolute
+			top: 7px
+			left: 0
+			width: 65px
+			height: 65px
+			background: $iron url('../img/icon/icon-i.svg') no-repeat center / 20%
+			border-radius: 2px
+		p
+			font-size: 12px
+			color: $oslo-gray
+			line-height: 1.75
+			&:last-child
+				margin-bottom: 0

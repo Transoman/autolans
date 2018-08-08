@@ -1,0 +1,60 @@
+body
+	margin: 0
+	padding: 0
+	min-width: 320px
+	font-family: $main-font
+	font-size: 14px
+	line-height: 1.6
+	color: $main-color
+
+img
+	max-width: 100%
+	height: auto
+
+a
+	color: $accent
+	+transition
+	&:hover, &:focus
+		text-decoration: none
+		color: #e7463f
+		outline: none
+
+/* Hidden element */
+.visually-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	padding: 0
+	border: 0
+	clip: rect(0 0 0 0)
+	overflow: hidden
+
+/* Buttons */
+.btn
+	display: inline-block
+	vertical-align: middle
+	padding: 10px 30px
+	font-family: $main-font
+	font-size: 16px
+	font-weight: 400
+	color: #fff
+	text-align: center
+	background-color: $accent
+	border: 0
+	outline: none
+	text-decoration: none
+	cursor: pointer
+	user-select: none
+	transition: all .25s ease
+	border-radius: 2px
+	&:hover
+		color: #fff
+		background-color: lighten($accent, 10%)
+	&:focus
+		color: #fff
+		background-color: darken($accent, 10%)
+	&[disabled]
+		background-color: #e5e5e5
+		cursor: not-allowed
+		color: #fff

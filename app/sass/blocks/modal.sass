@@ -1,0 +1,63 @@
+.modal
+  max-width: 445px
+  width: 100%
+  background: #fff
+  transform: scale(0.8)
+  p
+    font-size: 14px
+    text-align: center
+  &__close
+    position: absolute
+    right: 0
+    top: -30px
+    width: 30px
+    height: 30px
+    padding: 0 0 30px
+    margin: 0
+    outline: 0
+    border: none
+    background-color: $accent
+    z-index: 101
+    cursor: pointer
+    text-indent: 100%
+    white-space: nowrap
+    overflow: hidden
+    transition: all .25s ease
+    &::after, &::before
+      content: ''
+      position: absolute
+      display: block
+      height: 2px
+      width: 70%
+      background: #fff
+      transition: all .25s ease
+      transform-origin: 0 0
+    &::before
+      left: 8px
+      top: 8px
+      transform: rotate(45deg)
+    &::after
+      right: 3px
+      bottom: 5px
+      transform: rotate(-45deg)
+    &:hover
+      background-color: lighten($accent, 10%)
+    &:focus
+      outline: none
+  &__top
+    padding: 15px 40px
+    background-color: $porcelain
+    border-bottom: 1px solid $light-gray
+    h3
+      margin: 0
+      font-size: 24px
+      font-weight: 500
+      color: $dark-gray
+      line-height: 1.25
+  &__content
+    padding: 40px
+  &__bottom
+    text-align: center
+
+.popup_visible .modal
+  transform: scale(1)

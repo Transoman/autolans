@@ -1,0 +1,80 @@
+.nav-list
+	display: flex
+	margin: 0
+	padding: 0
+	list-style: none
+	li
+		margin-right: 25px
+		&:last-child
+			margin-right: 0
+	a
+		color: #fff
+		&:hover
+			color: #e7463f
+	&--footer
+		flex-direction: column
+		li
+			margin: 0
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+		a
+			position: relative
+			font-size: 16px
+			color: $gray-chateau
+			padding-left: 23px
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 50%
+				width: 12px
+				height: 1px
+				background-color: $accent
+
+.nav-toggle
+	display: none
+	// position: absolute
+	// right: 0
+	// top: 17px
+	width: 28px
+	height: 15px
+	padding: 0
+	margin: 0
+	outline: none
+	border: none
+	background: none
+	z-index: 101
+	cursor: pointer
+	+transition
+	&:focus
+		outline: none
+	&__line
+		position: relative
+		display: block
+		height: 2px
+		width: 100%
+		background-color: #fff
+		+transition
+		&::after, &::before
+			content: ''
+			position: absolute
+			left: 0
+			display: block
+			height: 2px
+			width: 100%
+			background-color: #fff
+			+transition
+		&::before
+			top: -6px
+		&::after
+			top: 6px
+	&.active
+		.nav-toggle__line
+			background: transparent
+			&::after
+				top: 0
+				transform: rotate(45deg)
+			&::before
+				top: 0
+				transform: rotate(-45deg)

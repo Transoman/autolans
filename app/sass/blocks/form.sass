@@ -1,0 +1,84 @@
+.form
+	&-group
+		position: relative
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+	&__label
+		position: absolute
+		left: 15px
+		top: 0
+		transform: translateY(50%)
+		margin: 0
+		font-size: 16px
+		font-weight: 300
+		color: $dov-gray
+		+transition
+		&.is-focus
+			font-size: 14px
+			transform: translateY(-30%)
+		&--red
+			position: static
+			margin-bottom: 10px
+			font-size: 18px
+			color: $accent
+			transform: none
+			&.is-focus
+				font-size: 18px
+				transform: none
+	&__field, &__textarea
+		width: 100%
+		padding: 13px 0
+		border: 0
+		border-bottom: 1px solid $tiara
+		font-size: 18px
+		color: $dark-gray
+		+transition
+		&:focus
+			outline: none
+	&__field
+		&--fill
+			background-color: #e9eaeb
+			border: 0
+			padding-left: 20px
+			padding-right: 20px
+	&__textarea
+		height: 170px
+	&__bottom
+		display: flex
+	&__required
+		position: absolute
+		right: 15px
+		top: 18px
+		font-size: 30px
+		font-weight: 300
+		color: $accent
+		line-height: 1
+	&__note
+		font-size: 12px
+		color: $dov-gray
+	label.error
+		position: absolute
+		top: 50%
+		left: calc(100% + 10px)
+		width: 200px
+		margin: 0
+		padding: 6px 10px
+		background-color: tomato
+		font-size: 14px
+		line-height: 1.3
+		color: #fff
+		border-radius: 2px
+		transform: translateY(-50%)
+		animation: op 0.25s ease
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: -5px
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 5px 5px 5px 0
+			border-color: transparent tomato transparent transparent

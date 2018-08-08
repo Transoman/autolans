@@ -1,0 +1,45 @@
+.banner-wrap
+	display: flex
+	margin-bottom: 50px
+.banner
+	width: 48.70%
+	margin-right: 20px
+	padding: 20px 30px
+	background-color: #e2e6e6
+	border-radius: 2px
+	+transition
+	&:nth-child(2n)
+		margin-right: 0
+	&:hover
+		background-color: $accent
+		p
+			color: #fff
+			border-right-color: rgba(#fff, 0.6)
+		i
+			color: rgba(#fff, 0.8)
+	a
+		display: flex
+		align-items: center
+	p
+		display: inline-block
+		vertical-align: middle
+		padding-right: 35px
+		margin-bottom: 0
+		// margin-right: 30px
+		font-size: 20px
+		font-weight: 500
+		color: $dark-gray
+		line-height: 1.5
+		border-right: 2px solid #bcc4c6
+		+transition
+		span
+			display: block
+			font-size: 30px
+			line-height: 1
+			text-transform: uppercase
+	i
+		margin-left: auto
+		font-size: 40px
+		color: #bcc4c6
+		vertical-align: middle
+		+transition

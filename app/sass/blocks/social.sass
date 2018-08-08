@@ -1,0 +1,47 @@
+.social
+	margin: 0
+	padding: 0
+	list-style: none
+	display: flex
+	margin-left: auto
+	li
+		margin-right: 20px
+		&:last-child
+			margin-right: 0
+	a
+		font-size: 18px
+		color: rgba(#fff, 0.4)
+		&:hover, &:focus
+			color: rgba(#fff, 1)
+	&--footer
+		flex-wrap: wrap
+		li
+			margin-right: 17px
+			margin-bottom: 10px
+			text-align: center
+			+transition
+			&:last-child
+				margin-right: 0
+			a
+				display: block
+				+size(40px)
+			i
+				font-size: 18px
+				color: #fff
+				line-height: 40px
+			&.social__vk
+				background-color: $kashmir-blue
+				&:hover
+					background-color: lighten($kashmir-blue, 10%)
+			&.social__fb
+				background-color: $chambray
+				&:hover
+					background-color: lighten($chambray, 10%)
+			&.social__twitter
+				background-color: $pickton-blue
+				&:hover
+					background-color: lighten($pickton-blue, 10%)
+			&.social__gp
+				background-color: $valencia
+				&:hover
+					background-color: lighten($valencia, 10%)
