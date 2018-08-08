@@ -1,14 +1,19 @@
 .advert
 	padding: 60px 0
 	background-color: $iron
+	&__container
+		display: flex
 	&__item
 		position: relative
 		display: flex
 		flex-direction: column
-		height: 100%
+		width: 25%
+		margin-right: 30px
 		background-color: #fff
 		box-shadow: 0 2px 4px rgba(#000, 0.15)
 		+transition
+		&:last-child
+			margin-right: 0
 		&:hover
 			box-shadow: 0 12px 40px rgba(#000, 0.15)
 		a

@@ -361,44 +361,39 @@
 
 			<section class="advert">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="advert__item">
-								<img src="img/content/notice-1.jpg" alt="">
-								<div class="advert__content">
-									<p>Запчасти митсубиси</p>
-								</div>
-								<a href="javascript:void(0)"></a>
+
+					<div class="advert__container">
+						<div class="advert__item">
+							<img src="img/content/notice-1.jpg" alt="">
+							<div class="advert__content">
+								<p>Запчасти митсубиси</p>
 							</div>
+							<a href="javascript:void(0)"></a>
 						</div>
-						<div class="col-md-3">
-							<div class="advert__item">
-								<img src="img/content/notice-2.jpg" alt="">
-								<div class="advert__content">
-									<p>Мы помогаем детскому <br>приюту «Покров»</p>
-								</div>
-								<a href="javascript:void(0)"></a>
+						<div class="advert__item">
+							<img src="img/content/notice-2.jpg" alt="">
+							<div class="advert__content">
+								<p>Мы помогаем детскому <br>приюту «Покров»</p>
 							</div>
+							<a href="javascript:void(0)"></a>
 						</div>
-						<div class="col-md-3">
-							<div class="advert__item">
-								<img src="img/content/notice-3.jpg" alt="">
-								<div class="advert__content">
-									<p>Выкуп битых авто</p>
-								</div>
-								<a href="javascript:void(0)"></a>
+						<div class="advert__item">
+							<img src="img/content/notice-3.jpg" alt="">
+							<div class="advert__content">
+								<p>Выкуп битых авто</p>
 							</div>
+							<a href="javascript:void(0)"></a>
 						</div>
-						<div class="col-md-3">
-							<div class="advert__item">
-								<img src="img/content/notice-4.jpg" alt="">
-								<div class="advert__content">
-									<p>Запчасти DUSTER</p>
-								</div>
-								<a href="javascript:void(0)"></a>
+						<div class="advert__item">
+							<img src="img/content/notice-4.jpg" alt="">
+							<div class="advert__content">
+								<p>Запчасти DUSTER</p>
 							</div>
+							<a href="javascript:void(0)"></a>
 						</div>
 					</div>
+					<!-- /.advert__container -->
+
 				</div>
 				<!-- /.container -->
 			</section>
@@ -594,28 +589,30 @@
 			</div>
 
 			<div class="modal__content">
-				<form action="sendmail.php" class="form question-form" method="post">
+				<form action="sendmail.php" class="row form question-form" method="post">
 
 					<input type="hidden" name="subject" value="Обратный звонок">
 
-					<div class="form-group">
+					<div class="col-12 form-group">
 						<label for="name" class="form__label">Ваше имя</label>
 						<input type="text" id="name" class="form__field" name="name" required>
 					</div>
 
-					<div class="form-group">
+					<div class="col-12 form-group">
 						<label for="email" class="form__label">Ваш E-mail</label>
 						<input type="email" id="email" name="email" class="form__field" required>
 					</div>
 
-					<div class="form-group">
+					<div class="col-12 form-group">
 						<label for="question" class="form__label">Текст вопроса</label>
 						<textarea name="question" id="question" class="form__textarea" required></textarea>
 					</div>
 
-					<small class="form__note">Сообщение появится после проверки администратором сайта</small>
+					<div class="col-12">
+						<small class="form__note">Сообщение появится после проверки администратором сайта</small>
+					</div>
 
-					<div class="form-group">
+					<div class="col-12 form-group">
 
 					</div>
 

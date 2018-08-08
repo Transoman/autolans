@@ -203,6 +203,18 @@
 	.action
 		display: block
 
+	.advert
+		.container
+			max-width: none
+			padding: 0
+		&__container
+			padding: 0 15px
+			overflow-x: scroll
+			-webkit-overflow-scrolling: touch
+		&__item
+			flex: 0 0 255px
+			width: 255px
+
 	.footer
 		&__top
 			padding-bottom: 25px
@@ -307,6 +319,12 @@
 
 	.action
 		padding-top: 0
+
+	.advert
+		&__item
+			flex: 0 0 200px
+			width: 200px
+			margin-right: 25px
 
 	.banner-wrap
 		flex-direction: column
