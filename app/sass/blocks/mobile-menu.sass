@@ -1,0 +1,76 @@
+.mobile-menu
+	position: fixed
+	top: 48px
+	left: 0
+	transform: translateX(-100%)
+	width: 320px
+	padding-bottom: 5px
+	height: calc(100vh - 48px)
+	background-color: $fuscous-gray
+	z-index: 100
+	overflow-y: auto
+	+transition
+	&.open
+		transform: translateX(0)
+	&__list
+		margin: 10px 0 0
+		padding: 0
+		list-style: none
+		border-bottom: 1px solid rgba(#fff, 0.2)
+		a
+			display: block
+			padding: 10px 15px
+			color: rgba(#fff, 0.5)
+			&:hover
+				color: #fff
+			img
+				display: none
+		&--cat
+			li
+				position: relative
+				&.menu-item-has-children
+					> a
+						position: relative
+						&::after
+							content: '\e90b'
+							font-family: 'icomoon'
+							font-size: 10px
+							color: #fff
+							position: absolute
+							right: 15px
+							top: 50%
+							width: 10px
+							transform: translateY(-50%)
+							+transition
+					&:hover
+						> a
+							&::after
+								transform: translateY(-50%) rotate(180deg)
+						> .sub-menu
+							display: block
+				&:hover
+					> a
+						color: $accent
+			a
+				font-size: 16px
+				color: #fff
+			.sub-menu
+				display: none
+				margin: 0
+				margin-left: 10px
+				padding: 0
+				list-style: none
+				background-color: $fuscous-gray
+				li
+					&:hover
+						> a
+							color: $accent
+
+	&__phone
+		padding: 15px
+		&-tel
+			font-size: 24px
+			font-weight: 700
+			color: #fff
+			span
+				font-weight: 400

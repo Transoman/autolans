@@ -6,6 +6,18 @@ body
 	font-size: 14px
 	line-height: 1.6
 	color: $main-color
+	&.active
+		overflow: hidden
+		&::before
+			content: ''
+			position: fixed
+			display: block
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background-color: rgba(#000, 0.6)
+			z-index: 1
 
 img
 	max-width: 100%

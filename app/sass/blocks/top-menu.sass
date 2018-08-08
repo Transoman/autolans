@@ -1,6 +1,14 @@
 .top-menu
 	padding: 6px 0
 	background: $dark-gray
+	+transition
+	&.sticky
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 100
+		animation: slideDown 0.3s ease
 	&__wrap
 		display: flex
 		align-items: center
@@ -15,3 +23,9 @@
 				display: none
 		.widget-cart__right
 			display: none
+
+@keyframes slideDown
+	0%
+		transform: translateY(-100%)
+	100%
+		transform: translateY(0)

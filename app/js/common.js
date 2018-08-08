@@ -1,5 +1,25 @@
 jQuery(document).ready(function($) {
 
+  // Toggle menu
+  $('.nav-toggle').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('.mobile-menu').toggleClass('open');
+    $('body').toggleClass('active');
+  });
+
+  var h = $('.top-menu').innerHeight();
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 150) {
+      $('body').css('margin-top', h);
+      $('.top-menu').addClass('sticky');
+    }
+    else {
+      $('body').css('margin-top', 0);
+      $('.top-menu').removeClass('sticky');
+    }
+  });
+
   // News tab
   $('.news-tabs').tabslet({
     autorotate: true,
