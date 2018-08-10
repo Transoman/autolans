@@ -1,8 +1,11 @@
 .menu
-  &__header
+  &:hover > .menu-list
+    display: block
+  &__top
     position: relative
     padding: 13px 20px
     background-color: $accent
+    cursor: pointer
     p
       margin: 0
       font-size: 22px
@@ -57,6 +60,7 @@
         transform: rotate(-45deg)
 
 .menu-list
+  display: none
   margin: 0
   padding: 0
   list-style: none
