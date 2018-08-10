@@ -1,0 +1,28 @@
+.pagination
+	display: flex
+	justify-content: center
+	&__number
+		+size(40px)
+		margin-right: 10px
+		font-size: 16px
+		font-weight: 500
+		color: $dark-gray
+		text-align: center
+		line-height: 40px
+		border: 1px solid $light-gray
+		border-radius: 3px
+		&:last-child
+			margin-right: 0
+		&:hover
+			background-color: $porcelain
+	&__current
+		color: $accent
+		background-color: $porcelain
+	&__dots
+		border: none
+		&:hover, &:focus
+			background: none
+	&__prev, &__next
+		color: $accent
+		font-size: 18px
+		line-height: 45px

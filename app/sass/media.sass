@@ -3,17 +3,17 @@
 @media only screen and (max-width: 1600px)
 	.form-search-vin
 		label.error
+			left: auto
+			right: 0
+			top: auto
+			bottom: 100%
+			transform: translateY(40%)
+			&::before
+				top: calc(100% + 2px)
 				left: auto
-				right: 0
-				top: auto
-				bottom: 100%
-				transform: translateY(40%)
-				&::before
-					top: calc(100% + 2px)
-					left: auto
-					right: 17px
-					border-width: 5px 5px 0 5px
-					border-color: tomato transparent transparent transparent
+				right: 17px
+				border-width: 5px 5px 0 5px
+				border-color: tomato transparent transparent transparent
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px)
@@ -125,6 +125,11 @@
 
 	.scroll-top
 		right: 3%
+
+	.top-section
+		&__menu
+			flex: 0 0 255px
+			width: 255px
 
 
 /* Medium Devices, Desktops */

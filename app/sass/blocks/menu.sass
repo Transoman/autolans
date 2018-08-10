@@ -1,4 +1,5 @@
 .menu
+  position: relative
   &:hover > .menu-list
     display: block
   &__top
@@ -61,10 +62,17 @@
 
 .menu-list
   display: none
+  position: absolute
+  top: 100%
+  left: 0
   margin: 0
   padding: 0
   list-style: none
+  background-color: #fff
   box-shadow: 0 1px 4px rgba(#000, 0.15)
+  z-index: 10
+  +transition
+  animation: slideUp 0.25s ease
   li
     position: relative
     border-bottom: 1px solid $light-gray
@@ -106,9 +114,19 @@
     background-color: #fff
     z-index: 1
     box-shadow: 0 0 20px rgba(#000, 0.15)
+    +transition
+    animation: slideUp 0.25s ease
     li
       a
         padding: 10px 40px 10px 20px
         font-size: 14px
         &:hover
           color: $accent
+
+@keyframes slideUp
+  0%
+    opacity: 0
+    transform: translateY(20px)
+  100%
+    opacity: 1
+    transform: translateY(0)

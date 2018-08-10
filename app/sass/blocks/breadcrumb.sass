@@ -1,0 +1,17 @@
+.breadcrumb
+	margin: 0 0 10px
+	padding: 0
+	list-style: none
+	display: flex
+	font-size: 16px
+	font-weight: 300
+	li
+		&:not(:last-child)::after
+			content: '/'
+			margin: 0 5px
+	a
+		color: $dark-gray
+		&:hover
+			color: $cinnabar
+	span
+		color: $gray-2

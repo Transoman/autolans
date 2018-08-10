@@ -1,0 +1,35 @@
+.news-list
+	margin-bottom: 40px
+	&__item
+		display: flex
+		margin-bottom: 9px
+		border: 1px solid $porcelain
+		+transition
+		&:hover
+			box-shadow: 0 4px 20px rgba(#000, 0.12)
+	&__date
+		padding: 20px
+		font-size: 24px
+		color: $edward
+		text-align: center
+		flex: 0 0 160px
+		width: 160px
+		span
+			display: block
+			font-size: 48px
+			font-weight: 500
+			line-height: 1
+	&__img
+		flex: 0 0 190px
+		width: 190px
+	&__content
+		padding: 10px 120px 10px 30px
+		h2
+			font-size: 18px
+			font-weight: 500
+			color: $dark-gray
+		p
+			margin-bottom: 10px
+			font-size: 16px
+			font-weight: 300
+			color: $main-color
