@@ -1,0 +1,114 @@
+.product-list
+	margin-bottom: 30px
+	display: flex
+	flex-wrap: wrap
+	&__item
+		position: relative
+		display: flex
+		flex-direction: column
+		width: 24.32%
+		margin-bottom: 10px
+		margin-right: 10px
+		border: 1px solid $porcelain
+		border-radius: 3px
+		overflow: hidden
+		+transition
+		&:nth-child(4n)
+			margin-right: 0
+		&:hover
+			box-shadow: 0 4px 20px rgba(#000, 0.12)
+		&--out-stock
+			.product-list__title
+				a
+					color: $gray-2
+					&:hover
+						color: $gray-2
+			.product-list__stock
+				font-weight: 100
+				color: $dark-gray
+			.product-list__bottom
+				display: none
+	&__img-wrap
+		background-color: $porcelain
+		text-align: center
+		max-height: 195px
+		overflow: hidden
+	&__content
+		display: flex
+		flex-direction: column
+		flex-grow: 1
+		padding: 10px 15px 15px
+	&__title
+		font-size: 16px
+		font-weight: 400
+		a
+			color: $dark-gray
+			&:hover
+				color: $cinnabar
+	&__row
+		display: flex
+		justify-content: space-between
+		margin-bottom: 7px
+		&:last-child
+			margin-bottom: 0
+	&__info
+		padding-top: 10px
+		border-top: 1px solid $light-gray
+		color: $nevada
+	&__stock
+		margin: 0
+		font-size: 14px
+		color: $accent
+	&__state
+		margin: 0
+		font-weight: 500
+		color: $dark-gray
+	&__update
+		margin: 0
+	&__price
+		display: block
+		font-size: 30px
+		font-weight: 500
+		color: $dark-gray
+		line-height: 1
+		&-wrap
+			padding-top: 20px
+		&-old
+			position: relative
+			text-decoration: none
+			font-size: 16px
+			color: $nevada
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				right: 0
+				left: 0
+				height: 1px
+				background-color: rgba($accent, 0.5)
+	&__bottom
+		position: relative
+		margin-top: auto
+		padding-right: 80px
+	&__cart
+		position: absolute
+		right: 0
+		bottom: 0
+		display: block
+		+size(48px)
+		background-color: $accent
+		border-radius: 2px
+		color: #fff
+		font-size: 24px
+		padding: 6px 10px 10px
+		&:hover
+			background-color: $cinnabar
+			i
+				color: #fff
+		&:focus
+			i
+				color: #fff
+		i
+			line-height: 1
+			&:hover, &:focus
+				color: #fff

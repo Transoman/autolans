@@ -1,0 +1,56 @@
+.sorting-wrap
+	padding: 20px 0
+	border-top: 1px solid $light-gray
+	border-bottom: 1px solid $light-gray
+
+.sorting
+	display: flex
+	justify-content: space-between
+	&__label
+		margin: 0
+		margin-right: 30px
+		font-size: 18px
+		font-weight: 500
+		color: $dark-gray
+	&__select
+		margin-right: 30px
+		padding: 10px 40px 10px 20px
+		font-size: 16px
+		color: $dark-gray
+		border-radius: 3px
+		border-color: $light-gray
+		cursor: pointer
+		+transition
+		&:focus
+			outline: none
+			border-color: $silver-sand
+	&__reset
+		background: none
+		border: none
+		color: $accent
+		cursor: pointer
+		white-space: nowrap
+		+transition
+		span
+			border-bottom: 1px dashed
+		i
+			margin-right: 10px
+		&:hover
+			color: $cinnabar
+		&:focus
+			outline: none
+	&__right
+		display: flex
+		align-items: center
+		&-view
+			display: flex
+			align-items: center
+	&__view
+		margin-right: 20px
+		font-size: 23px
+		color: $tiara
+		line-height: 1
+		&:last-child
+			margin-right: 0
+		&:hover, &:focus, &.active
+			color: $oslo-gray

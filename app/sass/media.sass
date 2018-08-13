@@ -136,6 +136,32 @@
 			flex: 0 0 115px
 			width: 115px
 
+	.sorting
+		&__label
+			margin-right: 15px
+		&__select
+			margin-right: 10px
+			padding-right: 20px
+		&__view
+			margin-right: 10px
+
+	.filter
+		&__label
+			margin-right: 15px
+		&__btn
+			margin-right: 15px
+			font-size: 15px
+			&:nth-child(4),
+			&:nth-child(6)
+				margin-right: 25px
+
+	.product-list
+		&__item
+			width: 32.6%
+			&:nth-child(3n)
+				margin-right: 0
+			&:nth-child(4n)
+				margin-right: 10px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
@@ -301,6 +327,28 @@
 		margin-bottom: 30px
 		&__content
 			padding-right: 10px
+
+	.product-list
+		&__item
+			width: 49%
+			&:nth-child(3n)
+				margin-right: 10px
+			&:nth-child(2n)
+				margin-right: 0
+
+	.sorting
+		flex-direction: column
+		&__left
+			margin-bottom: 10px
+
+	.filter
+		flex-wrap: wrap
+		&__label
+			margin-bottom: 10px
+		&__btn
+			margin-bottom: 10px
+			&:nth-child(4), &:nth-child(6)
+				margin-right: 15px
 
 
 /* Small Devices, Tablets */
@@ -488,12 +536,39 @@
 				font-size: 16px
 
 
+@media only screen and (max-width: 576px)
+	.product-list
+		&__item
+			width: 100%
+			margin-right: 0
+			&:nth-child(3n)
+				margin-right: 0
+		&__img-wrap
+			max-height: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
 	.heading
 		&__left
 			padding-right: 70px
+
+	.sorting
+		&__label
+			font-size: 16px
+			margin-right: 0
+			margin-bottom: 10px
+		&__select
+			margin-right: 0
+			margin-bottom: 10px
+		&__left
+			display: flex
+			flex-direction: column
+			text-align: center
+		&__right
+			flex-direction: column
+			align-items: stretch
+			&-view
+				justify-content: center
 
 @media only screen and (max-width: 420px)
 	.header
