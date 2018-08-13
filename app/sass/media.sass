@@ -131,6 +131,11 @@
 			flex: 0 0 255px
 			width: 255px
 
+	.news-list
+		&__date
+			flex: 0 0 115px
+			width: 115px
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
@@ -194,6 +199,8 @@
 
 	.main
 		padding-top: 0
+		&__container
+			padding-bottom: 40px
 
 	.main-content
 		flex: 0 0 auto
@@ -285,6 +292,16 @@
 	.scroll-top
 		bottom: 80px
 
+	.top-section
+		padding-bottom: 20px
+		&__menu
+			display: none
+
+	.news-list
+		margin-bottom: 30px
+		&__content
+			padding-right: 10px
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px)
@@ -307,6 +324,14 @@
 			margin-right: 0
 			.phone__left
 				text-align: right
+
+	.main
+		&__container
+			padding-top: 30px
+
+	.main-title
+		margin-bottom: 15px
+		font-size: 24px
 
 	.form-search-vin-wrap
 		h3
@@ -417,10 +442,56 @@
 		br
 			display: block
 
+	.breadcrumb
+		font-size: 14px
+
+	.heading
+		box-shadow: none
+		&__wrap
+			flex-direction: column
+		&__left
+			flex: auto
+			max-width: none
+			padding: 15px 190px 20px 15px
+			box-shadow: 0 2px 20px rgba(#000, 0.1)
+			h1
+				font-size: 30px
+				line-height: 1.2
+			img
+				top: 20px
+				bottom: auto
+				right: 20px
+		&__right
+			img
+				max-width: 100%
+
+	.news-list
+		&__item
+			flex-wrap: wrap
+			margin-bottom: 20px
+		&__img
+			flex: auto
+			width: 100%
+			order: -1
+		&__date
+			flex-basis: 15%
+			padding: 10px 20px
+			font-size: 16px
+			span
+				font-size: 30px
+		&__content
+			flex: 1 1 0
+			padding-left: 0
+			h2
+				font-size: 16px
+
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
-	/**/
+	.heading
+		&__left
+			padding-right: 70px
 
 @media only screen and (max-width: 420px)
 	.header
@@ -483,6 +554,21 @@
 
 	.copyright
 		font-size: 14px
+
+	.heading
+		.container
+			padding: 0
+
+	.news-list
+		&__date
+			display: none
+		&__content
+			padding: 10px
+
+	.pagination
+		&__number
+			+size(34px)
+			line-height: 34px
 
 
 /* Custom, iPhone Retina */

@@ -41,6 +41,13 @@ jQuery(document).ready(function($) {
     return false;
   });
 
+  // Cut text
+  var txt = $('.news-list__content').find('p').text();
+  if (txt.length > 87) {
+     $('.news-list__content').find('p').text(txt.substring(0, 84) + '...');
+  }
+  console.log(txt);
+
   // Open VIN form
   $('.form-search__vin').click(function(e) {
     e.preventDefault();

@@ -4,7 +4,11 @@
 		display: flex
 		margin-bottom: 9px
 		border: 1px solid $porcelain
+		border-radius: 3px
+		overflow: hidden
 		+transition
+		&:last-child
+			margin-bottom: 0
 		&:hover
 			box-shadow: 0 4px 20px rgba(#000, 0.12)
 	&__date
