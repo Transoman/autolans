@@ -42,11 +42,19 @@ jQuery(document).ready(function($) {
   });
 
   // Cut text
-  var txt = $('.news-list__content').find('p').text();
-  if (txt.length > 87) {
-     $('.news-list__content').find('p').text(txt.substring(0, 84) + '...');
+  function checkWidth() {
+    if ( $(window).width() <= 992 ) {
+      var txt = $('.news-list__content').find('p').text();
+      if (txt.length > 87) {
+         $('.news-list__content').find('p').text(txt.substring(0, 84) + '...');
+      }
+    }
+    else {
+      $('.news-list__content').find('p').text(txt);
+    }
   }
-  console.log(txt);
+
+  checkWidth();
 
   // Open VIN form
   $('.form-search__vin').click(function(e) {
