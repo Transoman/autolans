@@ -56,6 +56,28 @@ jQuery(document).ready(function($) {
 
   checkWidth();
 
+  // Change view
+  $('.sorting__view--grid').click(function(e) {
+    e.preventDefault();
+    $('.sorting__view').removeClass('active');
+    $(this).addClass('active');
+    $('.product-list').removeClass('grid line list').addClass('grid');
+  });
+
+  $('.sorting__view--list').click(function(e) {
+    e.preventDefault();
+    $('.sorting__view').removeClass('active');
+    $(this).addClass('active');
+    $('.product-list').removeClass('grid line list').addClass('list');
+  });
+
+  $('.sorting__view--line').click(function(e) {
+    e.preventDefault();
+    $('.sorting__view').removeClass('active');
+    $(this).addClass('active');
+    $('.product-list').removeClass('grid line list').addClass('line');
+  });
+
   // Open VIN form
   $('.form-search__vin').click(function(e) {
     e.preventDefault();

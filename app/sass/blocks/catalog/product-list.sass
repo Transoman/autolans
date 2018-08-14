@@ -12,7 +12,7 @@
 		border: 1px solid $porcelain
 		border-radius: 3px
 		overflow: hidden
-		+transition
+		+transition(box-shadow)
 		&:nth-child(4n)
 			margin-right: 0
 		&:hover
@@ -71,8 +71,8 @@
 		font-weight: 500
 		color: $dark-gray
 		line-height: 1
-		&-wrap
-			padding-top: 20px
+		span
+			font-size: 18px
 		&-old
 			position: relative
 			text-decoration: none
@@ -89,6 +89,7 @@
 	&__bottom
 		position: relative
 		margin-top: auto
+		padding-top: 20px
 		padding-right: 80px
 	&__cart
 		position: absolute
@@ -112,3 +113,68 @@
 			line-height: 1
 			&:hover, &:focus
 				color: #fff
+	&.list
+		.product-list__item
+			flex-direction: row
+			width: 48.65%
+			margin-right: 30px
+			margin-bottom: 30px
+			&:nth-child(2n)
+				margin-right: 0
+		.product-list__img-wrap
+			max-height: none
+			flex: 0 0 285px
+			max-width: 285px
+		.product-list__title
+			margin-bottom: 5px
+			line-height: 1.5
+		.product-list__content
+			padding: 5px 10px 10px
+		.product-list__row
+			margin: 0
+		.product-list__bottom
+			padding-top: 5px
+	&.line
+		.product-list__item
+			flex-direction: row
+			width: 100%
+			margin: 0
+			margin-top: -1px
+		.ribbon
+			font-size: 12px
+		.product-list__img-wrap
+			flex-shrink: 0
+			max-width: 140px
+		.product-list__content
+			flex-direction: row
+			align-items: center
+			padding: 15px 25px
+		.product-list__title
+			flex: 0 0 275px
+			width: 275px
+			margin: 0
+			padding-right: 50px
+			line-height: 1.5
+		.product-list__info
+			flex-shrink: 0
+			flex-basis: 320px
+			padding: 0 40px
+			border-top: 0
+			border-left: 1px solid $light-gray
+			border-right: 1px solid $light-gray
+		.product-list__bottom
+			padding-top: 0
+			padding-right: 95px
+			padding-left: 40px
+			margin-top: 0
+			margin-left: auto
+		.product-list__price
+			display: inline-block
+			vertical-align: middle
+			margin-left: 15px
+		.product-list__price-old
+			vertical-align: middle
+			font-size: 18px
+		.product-list__cart
+			bottom: 50%
+			transform: translateY(50%)
