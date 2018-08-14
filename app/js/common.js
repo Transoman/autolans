@@ -26,6 +26,23 @@ jQuery(document).ready(function($) {
     delay: 5000,
   });
 
+  // Product tabs
+  $('.product-tabs').tabslet();
+
+  // Zoom image
+  $('.product-gallery__img img').elevateZoom({
+    zoomType: "inner"
+  });
+
+  // Fancybox
+  $('a[data-fancybox]').fancybox();
+
+  // Scroll to top
+  $(".scroll-top").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
+
   $(window).scroll(function() {
     if($(this).scrollTop() > 500) {
       $('.scroll-top').addClass('active');
@@ -33,12 +50,6 @@ jQuery(document).ready(function($) {
     else {
       $('.scroll-top').removeClass('active');
     }
-  });
-
-  // Scroll to top
-  $(".scroll-top").click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-    return false;
   });
 
   // Cut text
@@ -78,6 +89,68 @@ jQuery(document).ready(function($) {
     $('.product-list').removeClass('grid line list').addClass('line');
   });
 
+  // Qty buton
+  function changeProductQuantity() {
+    $(document).on( 'click', '.product__quantity-container button', function(e) {
+        e.preventDefault();
+
+        var $button = $( this ),
+        $qty = $button.siblings( '.product__quantity' ),
+        current = parseInt( $qty.val() && $qty.val() > 0 ? $qty.val() : 0, 10 ),
+        min = parseInt( $qty.attr( 'min' ), 10 ),
+        max = parseInt( $qty.attr( 'max' ), 10 );
+
+        min = min ? min : 0;
+        max = max ? max : current + 1;
+
+        if ( $button.hasClass( 'product__quantity-minus' ) && current > min ) {
+            $qty.val( current - 1 );
+            console.log('minus');
+            $qty.trigger( 'change' );
+        }
+
+        if ( $button.hasClass( 'product__quantity-plus' ) && current < max ) {
+            $qty.val( current + 1 );
+            console.log('plus');
+            $qty.trigger( 'change' );
+        }
+    });
+  }
+
+  changeProductQuantity();
+
+  // Change product image
+  $('.product-gallery__thumbnails img').click(function(){
+      var large = $(this).data('large_image');
+      setActive($(this));
+      $('.product-gallery__img img').fadeOut(300, changeImg(large, $('.product-gallery__img img')));
+  });
+
+  // Add active class in current thumbnail image
+  function setActive(el){
+    var element = el;
+    $('.thumbnails-carousel .item').removeClass('active-item');
+    element.parent('.item').addClass('active-item');
+  }
+
+  function changeImg(large, element){
+    var element = element;
+    var large = large;
+    setTimeout(function(){ tdZoomFade()},300);
+    function tdZoomFade(){
+        element.attr('src', large)
+        element.attr('data-large_image', large)
+        // element.attr('srcset', large)
+        element.fadeIn(300);
+    }
+    var zoomType = $('.product-gallery__img').data('zoomstyle');
+    if(zoomType !='default'){
+        var ez = $('.product-gallery__img img').data('elevateZoom');
+        ez.swaptheimage(large, large);
+    }
+  }
+
+
   // Open VIN form
   $('.form-search__vin').click(function(e) {
     e.preventDefault();
@@ -95,6 +168,12 @@ jQuery(document).ready(function($) {
     onclose: function() {
       $(this).find('label.error').remove();
     }
+  });
+
+  // Product slider
+   var productSlider = new Swiper ('.product-gallery__thumbnails', {
+    slidesPerView: 4,
+    spaceBetween: 15
   });
 
   // Form

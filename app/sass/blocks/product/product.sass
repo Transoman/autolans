@@ -1,0 +1,156 @@
+.product
+	padding-bottom: 40px
+	&__title
+		margin-bottom: 30px
+		font-size: 24px
+		font-weight: 500
+		color: $dark-gray
+	&__content
+		position: relative
+		.ribbon
+			left: auto
+			top: 0
+			right: 0
+			padding-top: 1px
+			padding-bottom: 1px
+			font-size: 18px
+	&__code
+		margin-bottom: 40px
+		font-size: 18px
+		color: $nevada
+		span
+			font-weight: 500
+			color: $dark-gray
+	&__row
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 40px
+	&__price
+		font-size: 36px
+		font-weight: 500
+		color: $accent
+		span
+			font-size: 24px
+		&-wrap
+			display: flex
+			flex-grow: 1
+			align-items: center
+			justify-content: space-between
+			margin-right: 75px
+			padding: 11px 30px
+			border: 1px solid $light-gray
+			border-radius: 3px
+		&-old
+			position: relative
+			font-size: 24px
+			font-weight: 500
+			color: $rolling-stone
+			text-decoration: none
+			&::before
+				content: ''
+				position: absolute
+				top: 55%
+				left: 0
+				right: 0
+				height: 2px
+				background-color: rgba($accent, 0.5)
+			&::after
+				content: ''
+				position: absolute
+				display: inline-block
+				margin: auto 40px
+				height: 100%
+				width: 1px
+				background-color: $light-gray
+	&__quantity
+		width: 100%
+		padding: 7px 30px
+		font-size: 18px
+		font-weight: 500
+		color: $dark-gray
+		text-align: center
+		border: 1px solid $light-gray
+		border-radius: 3px
+		box-shadow: none
+		appearance: textfield
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button
+			appearance: none
+			margin: 0
+		&:focus
+			outline: none
+		&-minus, &-plus
+			position: absolute
+			top: 1px
+			bottom: 1px
+			width: 35px
+			background: #fff
+			border: 0
+			font-size: 24px
+			font-weight: 500
+			z-index: 1
+			cursor: pointer
+			+transition
+			&:hover
+				background-color: $porcelain
+			&:focus
+				outline: none
+		&-minus
+			left: 1px
+			color: $accent
+		&-plus
+			right: 1px
+			color: $meadow
+		&-wrap
+			text-align: right
+			label
+				margin-bottom: 9px
+				font-size: 18px
+				color: $dark-gray
+		&-container
+			position: relative
+			width: 115px
+	&__your-price
+		font-size: 16px
+		font-weight: 500
+	&__add-cart
+		position: relative
+		padding-right: 20px
+		padding-left: 20px
+		font-size: 18px
+		font-weight: 500
+		i
+			font-size: 21px
+			margin-left: 55px
+			vertical-align: text-top
+			&::after
+				content: ''
+				position: absolute
+				right: 70px
+				top: 8px
+				bottom: 8px
+				width: 1px
+				background-color: rgba(#fff, 0.5)
+	&__meta
+		margin: 0
+		padding: 0
+		padding-top: 20px
+		list-style: none
+		border-top: 1px solid $light-gray
+		li
+			display: flex
+			margin-bottom: 10px
+			font-size: 16px
+			color: $nevada
+			p
+				margin: 0
+				flex-basis: 52.77%
+			span
+				font-weight: 500
+				color: $dark-gray
+			&:last-child
+				margin-bottom: 0
+
+.social-wrap--content
+	display: none

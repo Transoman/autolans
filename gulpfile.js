@@ -69,7 +69,10 @@ gulp.task('script', function() {
 			'app/libs/Tabslet/jquery.tabslet.min.js',
 			'app/libs/jquery-popup-overlay/jquery.popupoverlay.js',
 			'app/libs/jquery-validation/dist/jquery.validate.js',
-			'app/libs/jquery-mask-plugin/dist/jquery.mask.min.js'
+			'app/libs/jquery-mask-plugin/dist/jquery.mask.min.js',
+			'app/libs/swiper/dist/js/swiper.min.js',
+			'app/libs/elevatezoom/jquery.elevateZoom-2.2.3.min.js',
+			'app/libs/fancybox/dist/jquery.fancybox.min.js'
 		])
 	.pipe(concat('script.js'))
 	// .pipe(uglify())
