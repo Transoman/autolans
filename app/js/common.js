@@ -8,8 +8,9 @@ jQuery(document).ready(function($) {
     $('body').toggleClass('active');
   });
 
-  var h = $('.top-menu').innerHeight();
+  // Sticky header
   $(window).scroll(function() {
+    var h = $('.top-menu').outerHeight();
     if($(this).scrollTop() > 150) {
       $('body').css('margin-top', h);
       $('.top-menu').addClass('sticky');
@@ -30,9 +31,77 @@ jQuery(document).ready(function($) {
   $('.product-tabs').tabslet();
 
   // Zoom image
-  $('.product-gallery__img img').elevateZoom({
-    zoomType: "inner"
+  function zoom() {
+    $('.product-gallery__img img').elevateZoom({
+      zoomType: "lens",
+      containLensZoom: true
+    });
+  }
+
+  zoom();
+
+  $(window).resize(function(event) {
+    zoom();
   });
+
+  // Cart steps
+  var currentTab = 0; // Current tab is set to be the first tab (0)
+  showTab(currentTab); // Display the current tab
+
+  $('.cart__btn-prev').click( function(e) {
+    e.preventDefault();
+    nextPrev(-1);
+  } );
+
+  $('.cart__btn-next').click( function(e) {
+    e.preventDefault();
+
+    if ( (currentTab + 1) >  $('.cart__step').length - 1  ) {
+       $('.cart-form').submit();
+      return false;
+    }
+    
+    nextPrev(1);
+  } );
+
+  function showTab(n) {
+    // This function will display the specified tab of the form ...
+    var x = $('.cart__step');
+
+    var countStep = x.length;
+    var currentStep = n + 1;
+    console.log(x);
+
+    $(x[n]).css('display', 'block');
+    // ... and fix the Previous/Next buttons:
+    if (n == 0) {
+      $('.cart__btn-prev').text('Продолжить покупки');
+    } else {
+      $('.cart__btn-prev').text('Назад');
+    }
+    if (n == (x.length - 1)) {
+      $('.cart__btn-next').text('Оформить заказ');
+    } else {
+      $('.cart__btn-next').text('Далле');
+    }
+  }
+
+  function nextPrev(n) {
+    // This function will figure out which tab to display
+    var x = $('.cart__step');
+
+    // Hide the current tab:
+    $(x[currentTab]).css('display', 'none');
+    // Increase or decrease the current tab by 1:
+    currentTab = currentTab + n;
+    // if you have reached the end of the form... :
+    if (currentTab >= x.length) {
+      //...the form gets submitted:
+      return false;
+    }
+    // Otherwise, display the correct tab:
+    showTab(currentTab);
+  }
 
   // Fancybox
   $('a[data-fancybox]').fancybox();
@@ -122,7 +191,7 @@ jQuery(document).ready(function($) {
   // Change product image
   $('.product-gallery__thumbnails img').click(function(){
       var large = $(this).data('large_image');
-      setActive($(this));
+      // setActive($(this));
       $('.product-gallery__img img').fadeOut(300, changeImg(large, $('.product-gallery__img img')));
   });
 
@@ -141,6 +210,7 @@ jQuery(document).ready(function($) {
         element.attr('src', large)
         element.attr('data-large_image', large)
         // element.attr('srcset', large)
+        element.parent().attr('href', large)
         element.fadeIn(300);
     }
     var zoomType = $('.product-gallery__img').data('zoomstyle');
@@ -173,7 +243,11 @@ jQuery(document).ready(function($) {
   // Product slider
    var productSlider = new Swiper ('.product-gallery__thumbnails', {
     slidesPerView: 4,
-    spaceBetween: 15
+    spaceBetween: 15,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 
   // Form

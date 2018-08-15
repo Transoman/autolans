@@ -71,7 +71,7 @@ gulp.task('script', function() {
 			'app/libs/jquery-validation/dist/jquery.validate.js',
 			'app/libs/jquery-mask-plugin/dist/jquery.mask.min.js',
 			'app/libs/swiper/dist/js/swiper.min.js',
-			'app/libs/elevatezoom/jquery.elevateZoom-2.2.3.min.js',
+			'app/libs/elevatezoom3/jquery.elevateZoom-3.0.8.min.js',
 			'app/libs/fancybox/dist/jquery.fancybox.min.js'
 		])
 	.pipe(concat('script.js'))

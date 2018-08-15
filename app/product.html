@@ -119,7 +119,7 @@
 							<i class="icon-cart"></i>
 							<span class="widget-cart__count">12</span>
 						</div>
-						<a href="javascript:void(0)"></a>
+						<a href="javascript:void(0)" class="cart_open"></a>
 					</div>
 
 				</div>
@@ -159,7 +159,7 @@
 						<div class="widget-cart__right">
 							<span class="widget-cart__total">на 22 400 руб.</span>
 						</div>
-						<a href="javascript:void(0)"></a>
+						<a href="javascript:void(0)" class="cart_open"></a>
 					</div>
 
 				</div>
@@ -305,34 +305,36 @@
 
 					<div class="row">
 
-						<div class="col-md-6">
+						<div class="col-lg-6">
 							<div class="product-gallery">
 
 								<div class="product-gallery__img">
 									<span class="ribbon ribbon--offer">Спецпредложение</span>
-									<a href="img/content/news/news-item-1.jpg" data-fancybox>
-										<img src="img/content/news/news-item-1.jpg" alt="">
+									<a href="img/content/product/product-1.jpg" data-fancybox>
+										<img src="img/content/product/product-1.jpg" alt="" width="510" height="373">
 									</a>
 								</div>
 
 								<div class="product-gallery__thumbnails swiper-container">
 									<div class="swiper-wrapper">
 										<div class="product-gallery__thumbnails-item swiper-slide">
-											<img src="img/content/news/news-item-1.jpg" alt="" data-large_image="img/content/news/news-item-1.jpg">
+											<img src="img/content/product/product-1.jpg" alt="" data-large_image="img/content/product/product-1.jpg">
 										</div>
 										<div class="product-gallery__thumbnails-item swiper-slide">
-											<img src="img/content/news/news-item-1.jpg" alt="" data-large_image="https://picsum.photos/1000/800">
+											<img src="img/content/product/product-2.jpg" alt="" data-large_image="img/content/product/product-2.jpg">
 										</div>
 										<div class="product-gallery__thumbnails-item swiper-slide">
-											<img src="img/content/news/news-item-1.jpg" alt="" data-large_image="img/content/news/news-item-1.jpg">
+											<img src="img/content/product/product-3.jpg" alt="" data-large_image="img/content/product/product-3.jpg">
 										</div>
 										<div class="product-gallery__thumbnails-item swiper-slide">
-											<img src="img/content/news/news-item-1.jpg" alt="" data-large_image="img/content/news/news-item-1.jpg">
+											<img src="img/content/product/product-4.jpg" alt="" data-large_image="img/content/product/product-4.jpg">
 										</div>
 										<div class="product-gallery__thumbnails-item swiper-slide">
-											<img src="img/content/news/news-item-1.jpg" alt="" data-large_image="img/content/news/news-item-1.jpg">
+											<img src="img/content/product/product-2.jpg" alt="" data-large_image="img/content/product/product-2.jpg">
 										</div>
 									</div>
+										<div class="swiper-button-prev"></div>
+										<div class="swiper-button-next"></div>
 								</div>
 
 							</div>
@@ -358,16 +360,20 @@
 
 						</div>
 
-						<div class="col-md-6">
+						<div class="col-lg-6">
 
 							<div class="product__content">
 								<p class="product__code">Артикул: <span>7397042010B0_BU</span></p>
 								<span class="ribbon ribbon--offer">Спецпредложение</span>
 
-								<div class="product__row">
+								<div class="product__row product__row--price">
 									<div class="product__price-wrap">
-										<del class="product__price-old">2400 р.</del>
-										<span class="product__price">1680 <span>руб.</span></span>
+										<div class="product__price-left">
+											<del class="product__price-old">2400 р.</del>
+										</div>
+										<div class="product__price-right">
+											<span class="product__price">1680 <span>руб.</span></span>
+										</div>
 									</div>
 									<div class="product__quantity-wrap">
 										<form action="#">
@@ -435,6 +441,15 @@
 				<!-- /.container -->
 			</section>
 			<!-- /.product -->
+
+			<section class="section-text section-text--no-bd">
+				<div class="container">
+					<h2>Интернет магазин AUTOLANS</h2>
+					<p>У нас огромный выбор автотоваров для иномарок, в результате чего можно купить необходиміе запчати по самым лучшим ценам и со скидкой. Среди электроники особой популярностью среди водителей пользуется фара противотуманная, антенна на авто и дневные ходовые огни машины с гарантией качества и всеми сертификатами. Переходя к кузову автомобиля можно с уверенностью сказать, что одним из главных наших преимуществ наличие огромного количества автомобильной пластмассы, начиная от переднего и заднего бампера, заканчивая съемной и простой тонировкой стекол боковых и лобового для авто, брызговиками машины, автомобильной шумоизоляция авто и насадки на глушитель в результате чего автомобиль преобразиться и позволит выделиться на дороге.</p>
+				</div>
+				<!-- /.container -->
+			</section>
+			<!-- /.seo-text -->
 
 			<section class="advert">
 				<div class="container">
@@ -688,6 +703,79 @@
 					</div>
 
 				</form>
+			</div>
+		</div>
+
+		<div id="cart" class="modal modal--cart cart">
+			<button class="cart_close modal__close">
+				Close
+				<span class="modal__close-line"></span>
+			</button>
+
+			<div class="modal__top">
+				<h3>Корзина</h3>
+				<ul class="cart__step-list">
+					<li>Товары в корзине</li>
+					<li>Способ доставки</li>
+					<li>Заказ</li>
+					<li>Оплата</li>
+				</ul>
+			</div>
+
+			<form action="#" class="cart-form" method="post">
+
+				<div class="cart__step">
+					<table class="cart__table">
+						<thead>
+							<tr>
+								<th></th>
+								<th colspan="2">Товар</th>
+								<th>Цена</th>
+								<th>Количество</th>
+								<th>Сумма</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="cart__remove"><svg width="13" height="17"><use xlink:href="#icon-delete"></use></svg></td>
+								<td class="cart__img">
+									<img src="img/content/product/product-1.jpg" alt="" width="87" height="64">
+								</td>
+								<td class="cart__title">
+									<h4>SRS в торпедо (правый руль) RAV4 РАВ4 00-05 TOYOTA 7397042010B0_BU</h4>
+									<p>Артикул: 7397042010B0_BU</p>
+								</td>
+								<td class="cart__price">1680 руб.</td>
+								<td class="cart__count"></td>
+								<td class="cart__item-sum">1680 <span>руб.</span></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td class="cart__total-text" colspan="4">Итого:</td>
+								<td class="cart__total" colspan="2">1680</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<!-- /.cart__step -->
+
+				<div class="cart__step">
+					<div class="form-group">
+						<select name="delivery" id="delivery" class="form__select">
+							<option value="Доставка до адреса в пределах МКАД - в вечернее время с 18:00 до 20:00 - 1 500 руб.">Доставка до адреса в пределах МКАД - в вечернее время с 18:00 до 20:00 - 1 500 руб.</option>
+						</select>
+					</div>
+				</div>
+				<!-- /.cart__step -->
+
+			</form>
+			<div class="cart__bottom">
+				<div class="cart__btns">
+					<a href="javascript:void(0)" class="btn cart__btn-prev">Продолжить покупки</a>
+					<button type="button" class="btn cart__btn-next">Далле</button>
+				</div>
+				<p class="cart__note">Обратите внимание, что состояние б/у деталей может не соответствовать фотографиям на сайте. Просьба перед оплатой заказа уточнять у наших менеджеров соответствие фотографий б/у деталей. Также уточняйте наличие всех заказываемых товаров по телефонам: <a href="tel:+74952818829">+7-495-281-88-29</a> или <a href="tel:88005050419">8-800-505-04-19</a></p>
 			</div>
 		</div>
 

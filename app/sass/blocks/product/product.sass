@@ -30,23 +30,29 @@
 		font-size: 36px
 		font-weight: 500
 		color: $accent
+		white-space: nowrap
 		span
 			font-size: 24px
 		&-wrap
 			display: flex
-			flex-grow: 1
 			align-items: center
 			justify-content: space-between
-			margin-right: 75px
+			margin-right: auto
 			padding: 11px 30px
 			border: 1px solid $light-gray
 			border-radius: 3px
+		&-left
+			padding-right: 35px
+			border-right: 1px solid $light-gray
+		&-right
+			padding-left: 35px
 		&-old
 			position: relative
 			font-size: 24px
 			font-weight: 500
 			color: $rolling-stone
 			text-decoration: none
+			white-space: nowrap
 			&::before
 				content: ''
 				position: absolute
@@ -55,14 +61,6 @@
 				right: 0
 				height: 2px
 				background-color: rgba($accent, 0.5)
-			&::after
-				content: ''
-				position: absolute
-				display: inline-block
-				margin: auto 40px
-				height: 100%
-				width: 1px
-				background-color: $light-gray
 	&__quantity
 		width: 100%
 		padding: 7px 30px

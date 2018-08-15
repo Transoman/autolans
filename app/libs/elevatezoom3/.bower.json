@@ -1,0 +1,15 @@
+{
+  "name": "elevatezoom3",
+  "homepage": "https://github.com/qodeboy-forks/elevatezoom",
+  "version": "3.0.8",
+  "_release": "3.0.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.0.8",
+    "commit": "52c10abd3de97906966edfe55370f053ac964ea8"
+  },
+  "_source": "https://github.com/qodeboy-forks/elevatezoom.git",
+  "_target": "^3.0.8",
+  "_originalSource": "elevatezoom3",
+  "_direct": true
+}
