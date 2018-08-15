@@ -1,3 +1,132 @@
 .cart
 	&__step
 		display: none
+		&-list
+			margin: 0
+			padding: 0
+			list-style: none
+			display: flex
+			li
+				font-size: 16px
+				color: $dark-gray
+				&::after
+					content: '\e90d'
+					font-family: 'icomoon'
+					display: inline-block
+					vertical-align: middle
+					margin: 0 20px
+					font-size: 12px
+					color: $tiara
+				&:last-child
+					&::after
+						display: none
+				&.active
+					color: $accent
+	&__table
+		width: 100%
+		&-head
+			border-bottom: 1px solid $light-gray
+			th
+				padding: 10px 20px
+				font-size: 14px
+				font-weight: 500
+				color: $dark-gray
+				text-align: center
+				&:nth-child(2)
+					text-align: left
+				&:nth-child(4)
+					padding-right: 0
+					padding-left: 0
+				&:last-child
+					padding-right: 30px
+					text-align: right
+		&-row
+			td
+				padding-top: 12px
+				padding-bottom: 12px
+		&-footer
+			border-top: 1px solid $light-gray
+	&__remove
+		padding: 0 10px 0 15px
+		svg
+			fill: $accent
+			+transition
+			&:hover
+				fill: $cinnabar
+	&__img
+		width: 87px
+		padding: 0
+	&__title
+		padding: 0 20px
+		h4
+			margin: 0
+			font-size: 16px
+			font-weight: 400
+			line-height: 1.5
+			a
+				color: $dark-gray
+				&:hover
+					color: $cinnabar
+		p
+			margin: 0
+			font-size: 14px
+			font-weight: 300
+			color: $nevada
+			text-align: left
+	&__price
+		padding: 0 20px
+		font-size: 18px
+		font-weight: 500
+		color: $accent
+		white-space: nowrap
+	&__count
+		.quantity-container
+			width: 90px
+			margin: 0 auto
+			.quantity__minus, .quantity__plus
+				width: 30px
+	&__item-sum
+		width: 170px
+		padding: 0 30px 0 10px
+		font-size: 18px
+		font-weight: 500
+		color: $accent
+		white-space: nowrap
+		text-align: right
+		span
+			font-size: 24px
+	&__total
+		padding: 15px 30px 0
+		font-size: 18px
+		font-weight: 500
+		color: $accent
+		text-align: right
+		span
+			font-size: 24px
+		&-text
+			font-size: 18px
+			font-weight: 500
+			color: $dark-gray
+			text-align: right
+	&__bottom
+		padding: 0 40px 35px
+		p
+			text-align: left
+	&__btns
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 40px
+		margin-bottom: 20px
+		.btn
+			font-size: 18px
+	&__btn
+		&-prev
+
+		&-next
+
+	&__note
+		font-size: 12px
+		color: $gray-2
+	&__wrap
+		padding: 40px 40px 0

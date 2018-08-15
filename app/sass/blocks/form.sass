@@ -45,6 +45,17 @@
 			padding-right: 20px
 	&__textarea
 		height: 170px
+	&__select
+		width: 100%
+		padding: 10px 20px
+		background-color: $porcelain
+		border: 1px solid $light-gray
+		border-radius: 3px
+		font-size: 16px
+		font-weight: 500
+		color: $dark-gray
+		&:focus
+			outline: none
 	&__bottom
 		display: flex
 	&__required
@@ -55,6 +66,33 @@
 		font-weight: 300
 		color: $accent
 		line-height: 1
+	&__checkbox
+		display: none
+		&:checked + label::after
+			opacity: 1
+			visibility: visible
+		&-label
+			position: relative
+			padding-left: 30px
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 2px
+				+size(18px)
+				background-color: $accent
+			&::after
+				content: ''
+				position: absolute
+				top: 5px
+				left: 6px
+				+size(6px, 10px)
+				border-bottom: 2px solid #fff
+				border-right: 2px solid #fff
+				transform: rotate(45deg)
+				+transition
+				opacity: 0
+				visibility: hidden
 	&__note
 		font-size: 12px
 		color: $dov-gray

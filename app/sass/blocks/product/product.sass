@@ -61,54 +61,12 @@
 				right: 0
 				height: 2px
 				background-color: rgba($accent, 0.5)
-	&__quantity
-		width: 100%
-		padding: 7px 30px
-		font-size: 18px
-		font-weight: 500
-		color: $dark-gray
-		text-align: center
-		border: 1px solid $light-gray
-		border-radius: 3px
-		box-shadow: none
-		appearance: textfield
-		&::-webkit-inner-spin-button,
-		&::-webkit-outer-spin-button
-			appearance: none
-			margin: 0
-		&:focus
-			outline: none
-		&-minus, &-plus
-			position: absolute
-			top: 1px
-			bottom: 1px
-			width: 35px
-			background: #fff
-			border: 0
-			font-size: 24px
-			font-weight: 500
-			z-index: 1
-			cursor: pointer
-			+transition
-			&:hover
-				background-color: $porcelain
-			&:focus
-				outline: none
-		&-minus
-			left: 1px
-			color: $accent
-		&-plus
-			right: 1px
-			color: $meadow
-		&-wrap
-			text-align: right
-			label
-				margin-bottom: 9px
-				font-size: 18px
-				color: $dark-gray
-		&-container
-			position: relative
-			width: 115px
+	&__quantity-wrap
+		text-align: right
+		label
+			margin-bottom: 9px
+			font-size: 18px
+			color: $dark-gray
 	&__your-price
 		font-size: 16px
 		font-weight: 500

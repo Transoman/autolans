@@ -1,0 +1,42 @@
+.quantity
+	width: 100%
+	padding: 7px 30px
+	font-size: 18px
+	font-weight: 500
+	color: $dark-gray
+	text-align: center
+	border: 1px solid $light-gray
+	border-radius: 3px
+	box-shadow: none
+	appearance: textfield
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button
+		appearance: none
+		margin: 0
+	&:focus
+		outline: none
+	&__minus, &__plus
+		position: absolute
+		top: 1px
+		bottom: 1px
+		width: 35px
+		background: #fff
+		border: 0
+		font-size: 24px
+		font-weight: 500
+		z-index: 1
+		cursor: pointer
+		+transition
+		&:hover
+			background-color: $porcelain
+		&:focus
+			outline: none
+	&__minus
+		left: 1px
+		color: $accent
+	&__plus
+		right: 1px
+		color: $meadow
+	&-container
+		position: relative
+		width: 115px

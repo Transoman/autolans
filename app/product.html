@@ -378,10 +378,10 @@
 									<div class="product__quantity-wrap">
 										<form action="#">
 											<label for="quantity">Количество:</label>
-											<div class="product__quantity-container">
-												<input type="number" name="quantity" id="quantity" class="product__quantity" value="1" min="1" max="100" step="1" pattern="[0-9]*" inputmode="numeric">
-												<button type="button" class="product__quantity-minus">-</button>
-												<button type="button" class="product__quantity-plus">+</button>
+											<div class="quantity-container">
+												<input type="number" name="quantity" id="quantity" class="quantity" value="1" min="1" max="100" step="1" pattern="[0-9]*" inputmode="numeric">
+												<button type="button" class="quantity__minus">-</button>
+												<button type="button" class="quantity__plus">+</button>
 											</div>
 										</form>
 									</div>
@@ -726,57 +726,187 @@
 
 				<div class="cart__step">
 					<table class="cart__table">
-						<thead>
+						<thead class="cart__table-head">
 							<tr>
-								<th></th>
-								<th colspan="2">Товар</th>
+								<th colspan="2"></th>
+								<th>Товар</th>
 								<th>Цена</th>
 								<th>Количество</th>
 								<th>Сумма</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td class="cart__remove"><svg width="13" height="17"><use xlink:href="#icon-delete"></use></svg></td>
+							<tr class="cart__table-row">
+								<td class="cart__remove">
+									<a href="javascript:void(0)">
+										<svg width="17" height="17"><use xlink:href="#icon-delete"></use></svg>
+									</a>
+								</td>
 								<td class="cart__img">
 									<img src="img/content/product/product-1.jpg" alt="" width="87" height="64">
 								</td>
 								<td class="cart__title">
-									<h4>SRS в торпедо (правый руль) RAV4 РАВ4 00-05 TOYOTA 7397042010B0_BU</h4>
+									<h4><a href="javascript:void(0)">SRS в торпедо (правый руль) RAV4 РАВ4 00-05 TOYOTA 7397042010B0_BU</a></h4>
 									<p>Артикул: 7397042010B0_BU</p>
 								</td>
-								<td class="cart__price">1680 руб.</td>
-								<td class="cart__count"></td>
-								<td class="cart__item-sum">1680 <span>руб.</span></td>
+								<td class="cart__price" data-price="1680">1680 руб.</td>
+								<td class="cart__count">
+									<div class="quantity-container">
+										<input type="number" name="quantity" id="quantity" class="quantity" value="1" min="1" max="100" step="1" pattern="[0-9]*" inputmode="numeric">
+										<button type="button" class="quantity__minus">-</button>
+										<button type="button" class="quantity__plus">+</button>
+									</div>
+								</td>
+								<td class="cart__item-sum"><span>1680</span> руб.</td>
+							</tr>
+							<tr class="cart__table-row">
+								<td class="cart__remove">
+									<a href="javascript:void(0)">
+										<svg width="17" height="17"><use xlink:href="#icon-delete"></use></svg>
+									</a>
+								</td>
+								<td class="cart__img">
+									<img src="img/content/product/product-2.jpg" alt="" width="87" height="64">
+								</td>
+								<td class="cart__title">
+									<h4><a href="javascript:void(0)">SRS в торпедо (правый руль) RAV4 РАВ4 00-05 TOYOTA 7397042010B0_BU</a></h4>
+									<p>Артикул: 7397042010B0_BU</p>
+								</td>
+								<td class="cart__price" data-price="1680">1680 руб.</td>
+								<td class="cart__count">
+									<div class="quantity-container">
+										<input type="number" name="quantity" id="quantity" class="quantity" value="1" min="1" max="100" step="1" pattern="[0-9]*" inputmode="numeric">
+										<button type="button" class="quantity__minus">-</button>
+										<button type="button" class="quantity__plus">+</button>
+									</div>
+								</td>
+								<td class="cart__item-sum"><span>1680</span> руб.</td>
 							</tr>
 						</tbody>
-						<tfoot>
+						<tfoot class="cart__table-footer">
 							<tr>
 								<td class="cart__total-text" colspan="4">Итого:</td>
-								<td class="cart__total" colspan="2">1680</td>
+								<td class="cart__total" colspan="2"><span>1680</span> руб.</td>
 							</tr>
 						</tfoot>
 					</table>
+
+					<div class="cart__bottom">
+						<div class="cart__btns">
+							<a href="javascript:void(0)" class="btn cart__continue btn--gray cart_close">Продолжить покупки</a>
+							<button type="button" class="btn cart__btn-prev btn--gray"><i class="icon-left-arrow"></i> <span>Назад</span></button>
+							<button type="button" class="btn cart__btn-next"><span>Далле</span> <i class="icon-right-arrow"></i></button>
+						</div>
+						<p class="cart__note">Обратите внимание, что состояние б/у деталей может не соответствовать фотографиям на сайте. Просьба перед оплатой заказа уточнять у наших менеджеров соответствие фотографий б/у деталей. Также уточняйте наличие всех заказываемых товаров по телефонам: <a href="tel:+74952818829">+7-495-281-88-29</a> или <a href="tel:88005050419">8-800-505-04-19</a></p>
+					</div>
 				</div>
 				<!-- /.cart__step -->
 
 				<div class="cart__step">
-					<div class="form-group">
-						<select name="delivery" id="delivery" class="form__select">
-							<option value="Доставка до адреса в пределах МКАД - в вечернее время с 18:00 до 20:00 - 1 500 руб.">Доставка до адреса в пределах МКАД - в вечернее время с 18:00 до 20:00 - 1 500 руб.</option>
-						</select>
+					<div class="cart__wrap row">
+						<div class="col-12 form-group">
+							<select name="delivery" id="delivery" class="form__select">
+								<option value="Доставка до адреса в пределах МКАД - в вечернее время с 18:00 до 20:00 - 1 500 руб.">Доставка до адреса в пределах МКАД - в вечернее время с 18:00 до 20:00 - 1 500 руб.</option>
+							</select>
+						</div>
+						<div class="col-12 form-group">
+							<label for="spare" class="form__label">Интересующие Вас запчасти</label>
+							<textarea name="spare" id="spare" class="form__textarea" required></textarea>
+						</div>
+					</div>
+
+					<div class="cart__bottom">
+						<div class="cart__btns">
+							<a href="javascript:void(0)" class="btn cart__continue btn--gray cart_close">Продолжить покупки</a>
+							<button type="button" class="btn cart__btn-prev btn--gray"><i class="icon-left-arrow"></i> <span>Назад</span></button>
+							<button type="button" class="btn cart__btn-next"><span>Далле</span> <i class="icon-right-arrow"></i></button>
+						</div>
+						<p class="cart__note">Если Вы затрудняетесь с выбором подходящего для Вас пункта доставки, то выберите самый нижний пункт «Самовывоз» и при обработке заказа наши менеджеры согласуют с Вами данный вопрос.</p>
+					</div>
+				</div>
+				<!-- /.cart__step -->
+
+				<div class="cart__step">
+					<div class="cart__wrap row">
+						<div class="col-12 col-md-6">
+							<div class="row">
+								<div class="col-12 form-group">
+									<label for="cart-name" class="form__label">ФИО или название организации</label>
+									<input type="text" name="name" id="cart-name" class="form__field" required>
+								</div>
+								<div class="col-12 form-group">
+									<label for="cart-phone" class="form__label">E-mail</label>
+									<input type="tel" name="phone" id="cart-phone" class="form__field" required>
+								</div>
+								<div class="col-12 form-group">
+									<label for="cart-email" class="form__label">Телефон</label>
+									<input type="email" name="email" id="cart-email" class="form__field" required>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 form-group">
+							<label for="spare" class="form__label">Интересующие Вас запчасти</label>
+							<textarea name="spare" id="spare" class="form__textarea" required></textarea>
+						</div>
+						<div class="col-12">
+							<input type="checkbox" name="terms" id="terms" class="form__checkbox">
+							<label for="terms" class="form__checkbox-label"> Я согласен <a href="javascript:void(0)">с условиями обработки персональных данных</a></label>
+						</div>
+					</div>
+
+					<div class="cart__bottom">
+						<div class="cart__btns">
+							<a href="javascript:void(0)" class="btn cart__continue btn--gray cart_close">Продолжить покупки</a>
+							<button type="button" class="btn cart__btn-prev btn--gray"><i class="icon-left-arrow"></i> <span>Назад</span></button>
+							<button type="button" class="btn cart__btn-next"><span>Далле</span> <i class="icon-right-arrow"></i></button>
+						</div>
+					</div>
+				</div>
+				<!-- /.cart__step -->
+
+				<div class="cart__step">
+					<div class="cart__wrap row">
+						<div class="col-12 form-group">
+							<select name="pay" id="pay" class="form__select">
+								<option value="Наличн.ыми курьеру (по г. Москва и МО)">Наличн.ыми курьеру (по г. Москва и МО)</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="cart__bottom">
+						<div class="cart__btns">
+							<a href="javascript:void(0)" class="btn cart__continue btn--gray cart_close">Продолжить покупки</a>
+							<button type="button" class="btn cart__btn-prev btn--gray"><i class="icon-left-arrow"></i> <span>Назад</span></button>
+							<button type="button" class="btn cart__btn-next"><span>Далле</span> <i class="icon-right-arrow"></i></button>
+						</div>
 					</div>
 				</div>
 				<!-- /.cart__step -->
 
 			</form>
-			<div class="cart__bottom">
-				<div class="cart__btns">
-					<a href="javascript:void(0)" class="btn cart__btn-prev">Продолжить покупки</a>
-					<button type="button" class="btn cart__btn-next">Далле</button>
-				</div>
-				<p class="cart__note">Обратите внимание, что состояние б/у деталей может не соответствовать фотографиям на сайте. Просьба перед оплатой заказа уточнять у наших менеджеров соответствие фотографий б/у деталей. Также уточняйте наличие всех заказываемых товаров по телефонам: <a href="tel:+74952818829">+7-495-281-88-29</a> или <a href="tel:88005050419">8-800-505-04-19</a></p>
+		</div>
+
+		<div id="thanks-order" class="modal modal--cart cart">
+			<button class="thanks-order_close modal__close">
+				Close
+				<span class="modal__close-line"></span>
+			</button>
+
+			<div class="modal__top">
+				<h3>Спасибо за заказ!</h3>
 			</div>
+
+			<h4 class="cart__order-success">Ваш заказ принят в работу!</h4>
+
+			<p class="cart__order-title">Номер Вашего заказа:</p>
+			<p class="cart__order-number">№ 2215 (298899809)</p>
+
+			<p class="cart__order-title">Сумма к оплате:</p>
+			<p class="cart__order-total">2 460 руб.</p>
+
+			<img src="img/logo.jpg" alt="">
+
+
 		</div>
 
 		<div id="thanks" class="modal">

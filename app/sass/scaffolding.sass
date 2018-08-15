@@ -58,7 +58,21 @@ a
 	&:focus
 		color: #fff
 		background-color: darken($accent, 10%)
+		outline: none
 	&[disabled]
 		background-color: #e5e5e5
 		cursor: not-allowed
 		color: #fff
+	&--gray
+		padding-top: 9px
+		padding-bottom: 9px
+		background-color: $porcelain
+		border: 1px solid $light-gray
+		font-size: 18px
+		color: $dark-gray
+		&:hover
+			background-color: $light-gray
+			color: $dark-gray
+		&:focus
+			background-color: $gray-chateau
+			color: $dark-gray

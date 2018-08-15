@@ -70,19 +70,22 @@ jQuery(document).ready(function($) {
 
     var countStep = x.length;
     var currentStep = n + 1;
-    console.log(x);
 
     $(x[n]).css('display', 'block');
+
+    $('.cart__step-list li').eq(n).addClass('active');
     // ... and fix the Previous/Next buttons:
     if (n == 0) {
-      $('.cart__btn-prev').text('Продолжить покупки');
+      $('.cart__btn-prev').css('display', 'none');
+      $('.cart__continue').css('display', 'inline-block');
     } else {
-      $('.cart__btn-prev').text('Назад');
+      $('.cart__continue').css('display', 'none');
+      $('.cart__btn-prev').css('display', 'inline-block');
     }
     if (n == (x.length - 1)) {
-      $('.cart__btn-next').text('Оформить заказ');
+      $('.cart__btn-next span').text('Оформить заказ').parent().find('i').css('display', 'none');
     } else {
-      $('.cart__btn-next').text('Далле');
+      $('.cart__btn-next span').text('Далле').parent().find('i').css('display', 'inline-block');;
     }
   }
 
@@ -92,6 +95,7 @@ jQuery(document).ready(function($) {
 
     // Hide the current tab:
     $(x[currentTab]).css('display', 'none');
+    $('.cart__step-list li').eq(currentTab).removeClass('active');
     // Increase or decrease the current tab by 1:
     currentTab = currentTab + n;
     // if you have reached the end of the form... :
@@ -160,11 +164,11 @@ jQuery(document).ready(function($) {
 
   // Qty buton
   function changeProductQuantity() {
-    $(document).on( 'click', '.product__quantity-container button', function(e) {
+    $(document).on( 'click', '.quantity-container button', function(e) {
         e.preventDefault();
 
         var $button = $( this ),
-        $qty = $button.siblings( '.product__quantity' ),
+        $qty = $button.siblings( '.quantity' ),
         current = parseInt( $qty.val() && $qty.val() > 0 ? $qty.val() : 0, 10 ),
         min = parseInt( $qty.attr( 'min' ), 10 ),
         max = parseInt( $qty.attr( 'max' ), 10 );
@@ -172,16 +176,19 @@ jQuery(document).ready(function($) {
         min = min ? min : 0;
         max = max ? max : current + 1;
 
-        if ( $button.hasClass( 'product__quantity-minus' ) && current > min ) {
+        if ( $button.hasClass( 'quantity__minus' ) && current > min ) {
             $qty.val( current - 1 );
-            console.log('minus');
             $qty.trigger( 'change' );
+            $price = $button.parent().parent().find('.cart__price').data('price');
+            $price = $button.parent().parent().parent().find('.cart__price').data('price');
+            $button.parent().parent().next().find('span').text($price * $qty.val());
         }
 
-        if ( $button.hasClass( 'product__quantity-plus' ) && current < max ) {
+        if ( $button.hasClass( 'quantity__plus' ) && current < max ) {
             $qty.val( current + 1 );
-            console.log('plus');
             $qty.trigger( 'change' );
+            $price = $button.parent().parent().parent().find('.cart__price').data('price');
+            $button.parent().parent().next().find('span').text($price * $qty.val());
         }
     });
   }
