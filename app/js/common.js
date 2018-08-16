@@ -24,8 +24,20 @@ jQuery(document).ready(function($) {
   // News tab
   $('.news-tabs').tabslet({
     autorotate: true,
-    delay: 5000,
+    delay: 5000
   });
+
+  function newsAllTop() {
+    if ( window.matchMedia("(min-width: 768px)").matches ) {
+      var hList = $('.news-tabs__list').innerHeight();
+      $('.news-tabs__all').css('top', hList + 5);
+    }
+    else {
+      $('.news-tabs__all').removeAttr('style');
+    }
+  }
+
+  newsAllTop();
 
   // Product tabs
   $('.product-tabs').tabslet();
@@ -49,6 +61,7 @@ jQuery(document).ready(function($) {
 
   $(window).resize(function(event) {
     zoom();
+    newsAllTop();
   });
 
   // Cart steps
