@@ -15,8 +15,11 @@
 		p
 			color: #fff
 			border-right-color: rgba(#fff, 0.6)
-		i
-			color: rgba(#fff, 0.8)
+		.banner__icon
+			fill: rgba(#fff, 0.8)
+			&--toyota
+				fill: transparent
+				stroke: rgba(#fff, 0.8)
 	a
 		display: flex
 		align-items: center
@@ -25,7 +28,6 @@
 		vertical-align: middle
 		padding-right: 35px
 		margin-bottom: 0
-		// margin-right: 30px
 		font-size: 20px
 		font-weight: 500
 		color: $dark-gray
@@ -37,9 +39,14 @@
 			font-size: 30px
 			line-height: 1
 			text-transform: uppercase
-	i
+	&__icon
+		width: 55px
+		height: 45px
+		fill: $submarin
 		margin-left: auto
-		font-size: 40px
-		color: #bcc4c6
-		vertical-align: middle
 		+transition
+		&--toyota
+			width: 62px
+			fill: transparent
+			stroke: $submarin
+			stroke-width: 6
