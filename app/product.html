@@ -722,9 +722,9 @@
 				</ul>
 			</div>
 
-			<form action="#" class="cart-form" method="post">
+			<form action="#" class="form cart-form" method="post">
 
-				<div class="cart__step">
+				<div class="cart__step cart__step-1">
 					<table class="cart__table">
 						<thead class="cart__table-head">
 							<tr>
@@ -745,19 +745,20 @@
 								<td class="cart__img">
 									<img src="img/content/product/product-1.jpg" alt="" width="87" height="64">
 								</td>
-								<td class="cart__title">
+								<td class="cart__title" data-title="Товар">
 									<h4><a href="javascript:void(0)">SRS в торпедо (правый руль) RAV4 РАВ4 00-05 TOYOTA 7397042010B0_BU</a></h4>
 									<p>Артикул: 7397042010B0_BU</p>
+									<input type="hidden" name="product[]" value="SRS в торпедо (правый руль) RAV4 РАВ4 00-05 TOYOTA 7397042010B0_BU1">
 								</td>
-								<td class="cart__price" data-price="1680">1680 руб.</td>
-								<td class="cart__count">
+								<td class="cart__price" data-price="1680" data-title="Цена">1680 руб.</td>
+								<td class="cart__count" data-title="Количество">
 									<div class="quantity-container">
 										<input type="number" name="quantity" id="quantity" class="quantity" value="1" min="1" max="100" step="1" pattern="[0-9]*" inputmode="numeric">
 										<button type="button" class="quantity__minus">-</button>
 										<button type="button" class="quantity__plus">+</button>
 									</div>
 								</td>
-								<td class="cart__item-sum"><span>1680</span> руб.</td>
+								<td class="cart__item-sum" data-title="Сумма"><span>1680</span> руб.</td>
 							</tr>
 							<tr class="cart__table-row">
 								<td class="cart__remove">
@@ -768,19 +769,20 @@
 								<td class="cart__img">
 									<img src="img/content/product/product-2.jpg" alt="" width="87" height="64">
 								</td>
-								<td class="cart__title">
+								<td class="cart__title" data-title="Товар">
 									<h4><a href="javascript:void(0)">SRS в торпедо (правый руль) RAV4 РАВ4 00-05 TOYOTA 7397042010B0_BU</a></h4>
 									<p>Артикул: 7397042010B0_BU</p>
+									<input type="hidden" name="product[]" value="SRS в торпедо (правый руль) RAV4 РАВ4 00-05 TOYOTA 7397042010B0_BU">
 								</td>
-								<td class="cart__price" data-price="1680">1680 руб.</td>
-								<td class="cart__count">
+								<td class="cart__price" data-price="1680" data-title="Цена">1680 руб.</td>
+								<td class="cart__count" data-title="Количество">
 									<div class="quantity-container">
 										<input type="number" name="quantity" id="quantity" class="quantity" value="1" min="1" max="100" step="1" pattern="[0-9]*" inputmode="numeric">
 										<button type="button" class="quantity__minus">-</button>
 										<button type="button" class="quantity__plus">+</button>
 									</div>
 								</td>
-								<td class="cart__item-sum"><span>1680</span> руб.</td>
+								<td class="cart__item-sum" data-title="Сумма"><span>1680</span> руб.</td>
 							</tr>
 						</tbody>
 						<tfoot class="cart__table-footer">
@@ -802,7 +804,7 @@
 				</div>
 				<!-- /.cart__step -->
 
-				<div class="cart__step">
+				<div class="cart__step cart__step-2">
 					<div class="cart__wrap row">
 						<div class="col-12 form-group">
 							<select name="delivery" id="delivery" class="form__select">
@@ -826,7 +828,7 @@
 				</div>
 				<!-- /.cart__step -->
 
-				<div class="cart__step">
+				<div class="cart__step cart__step-3">
 					<div class="cart__wrap row">
 						<div class="col-12 col-md-6">
 							<div class="row">
@@ -835,21 +837,21 @@
 									<input type="text" name="name" id="cart-name" class="form__field" required>
 								</div>
 								<div class="col-12 form-group">
-									<label for="cart-phone" class="form__label">E-mail</label>
-									<input type="tel" name="phone" id="cart-phone" class="form__field" required>
+									<label for="cart-email" class="form__label">E-mail</label>
+									<input type="email" name="email" id="cart-email" class="form__field" required>
 								</div>
 								<div class="col-12 form-group">
-									<label for="cart-email" class="form__label">Телефон</label>
-									<input type="email" name="email" id="cart-email" class="form__field" required>
+									<label for="cart-phone" class="form__label">Телефон</label>
+									<input type="tel" name="phone" id="cart-phone" class="form__field" required>
 								</div>
 							</div>
 						</div>
 						<div class="col-12 col-md-6 form-group">
-							<label for="spare" class="form__label">Интересующие Вас запчасти</label>
-							<textarea name="spare" id="spare" class="form__textarea" required></textarea>
+							<label for="spare-2" class="form__label">Интересующие Вас запчасти</label>
+							<textarea name="spare_2" id="spare-2" class="form__textarea" required></textarea>
 						</div>
-						<div class="col-12">
-							<input type="checkbox" name="terms" id="terms" class="form__checkbox">
+						<div class="col-12 form-group">
+							<input type="checkbox" name="terms" id="terms" class="form__checkbox visually-hidden" required>
 							<label for="terms" class="form__checkbox-label"> Я согласен <a href="javascript:void(0)">с условиями обработки персональных данных</a></label>
 						</div>
 					</div>
@@ -864,11 +866,11 @@
 				</div>
 				<!-- /.cart__step -->
 
-				<div class="cart__step">
+				<div class="cart__step cart__step-4">
 					<div class="cart__wrap row">
 						<div class="col-12 form-group">
 							<select name="pay" id="pay" class="form__select">
-								<option value="Наличн.ыми курьеру (по г. Москва и МО)">Наличн.ыми курьеру (по г. Москва и МО)</option>
+								<option value="Наличными курьеру (по г. Москва и МО)">Наличными курьеру (по г. Москва и МО)</option>
 							</select>
 						</div>
 					</div>
@@ -896,16 +898,26 @@
 				<h3>Спасибо за заказ!</h3>
 			</div>
 
-			<h4 class="cart__order-success">Ваш заказ принят в работу!</h4>
+			<div class="cart__modal-wrap row">
+				<div class="col-md-8">
+					<h4 class="cart__order-success">Ваш заказ принят в работу!</h4>
 
-			<p class="cart__order-title">Номер Вашего заказа:</p>
-			<p class="cart__order-number">№ 2215 (298899809)</p>
+					<p class="cart__order-title">Номер Вашего заказа:</p>
+					<p class="cart__order-number">№ 2215 (298899809)</p>
 
-			<p class="cart__order-title">Сумма к оплате:</p>
-			<p class="cart__order-total">2 460 руб.</p>
+					<p class="cart__order-title">Сумма к оплате:</p>
+					<p class="cart__order-total">2 460 руб.</p>
+				</div>
 
-			<img src="img/logo.jpg" alt="">
+				<div class="col-md-4">
+					<img src="img/logo.jpg" alt="" width="250" height="120">
+				</div>
 
+				<div class="cart__modal-bottom col-md-12">
+					<a href="javascript:void(0);" class="btn btn--gray"><i class="icon-printer"></i> Распечатать бланк заказа</a>
+					<a href="javascript:void(0);" class="btn">Оформить заказ</a>
+				</div>
+			</div>
 
 		</div>
 

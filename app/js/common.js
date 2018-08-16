@@ -32,10 +32,17 @@ jQuery(document).ready(function($) {
 
   // Zoom image
   function zoom() {
-    $('.product-gallery__img img').elevateZoom({
-      zoomType: "lens",
-      containLensZoom: true
-    });
+    if ( window.matchMedia("(min-width: 768px)").matches ) {
+      $('.zoomContainer').remove();
+      $('.product-gallery__img img').elevateZoom({
+        zoomType: "lens",
+        containLensZoom: true,
+        responsive: true
+      });
+    }
+    else {
+      $('.zoomContainer').remove();
+    }
   }
 
   zoom();
@@ -57,11 +64,13 @@ jQuery(document).ready(function($) {
     e.preventDefault();
 
     if ( (currentTab + 1) >  $('.cart__step').length - 1  ) {
-       $('.cart-form').submit();
+      $('.cart-form').submit();
       return false;
     }
-    
-    nextPrev(1);
+    checkForm();
+    if ($('.cart-form').valid()) {
+      nextPrev(1);
+    }
   } );
 
   function showTab(n) {
@@ -198,16 +207,8 @@ jQuery(document).ready(function($) {
   // Change product image
   $('.product-gallery__thumbnails img').click(function(){
       var large = $(this).data('large_image');
-      // setActive($(this));
       $('.product-gallery__img img').fadeOut(300, changeImg(large, $('.product-gallery__img img')));
   });
-
-  // Add active class in current thumbnail image
-  function setActive(el){
-    var element = el;
-    $('.thumbnails-carousel .item').removeClass('active-item');
-    element.parent('.item').addClass('active-item');
-  }
 
   function changeImg(large, element){
     var element = element;
@@ -311,6 +312,24 @@ jQuery(document).ready(function($) {
     }
   });
 
+  function checkForm() {
+    $(".cart-form").validate({
+    messages: {
+      spare: "Это поле обязательное",
+      spare_2: "Это поле обязательное",
+      name: "Введите Ваше имя",
+      email: "Введите Ваш E-mail",
+      phone: "Введите Ваш телефон",
+      terms: "Вы должны быть согласны"
+    },
+    submitHandler: function(form) {
+      console.log('submit');
+      var t = $('.cart-form').serialize();
+      ajaxSend('.cart-form', t);
+    }
+  });
+  }
+
   function ajaxSend(formName, data) {
     jQuery.ajax({
       type: "POST",
@@ -318,7 +337,12 @@ jQuery(document).ready(function($) {
       data: data,
       success: function() {
         $(".modal").popup("hide");
-        $("#thanks").popup("show");
+        if (formName == '.cart-form') {
+          $("#thanks-order").popup("show");
+        }
+        else {
+          $("#thanks").popup("show");
+        }
         setTimeout(function() {
           $(formName).trigger('reset');
         }, 2000);

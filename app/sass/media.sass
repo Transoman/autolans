@@ -705,6 +705,64 @@
 			.product-list__price-old
 				font-size: 16px
 
+	.cart
+		&__step
+			padding: 0 15px
+			&-list
+				margin-top: 15px
+		&__table
+			&-head
+				display: none
+			tr
+				display: block
+			td
+				display: block
+				padding: 10px
+				text-align: right
+				border-bottom: 1px solid $light-gray
+				&::before
+					content: attr(data-title)
+					font-size: 14px
+					font-weight: 500
+					color: $dark-gray
+					float: left
+			&-row
+				.cart__remove
+					text-align: center
+					svg
+						vertical-align: middle
+				.cart__img
+					text-align: center
+			&-footer
+				border: 0
+				td
+					border: 0
+		&__img
+			width: auto
+		&__item-sum
+			width: auto
+		&__count
+			.quantity-container
+				display: inline-block
+		&__wrap
+			padding: 15px 0 0
+		&__bottom
+			padding: 0
+		.form-group
+			&:last-child
+				margin-bottom: 30px
+		&__modal
+			&-wrap
+				padding: 15px
+				text-align: center
+			&-bottom
+				margin-top: 20px
+
+	.modal--cart
+		.modal__top
+			padding: 15px
+			flex-direction: column
+
 
 @media only screen and (max-width: 576px)
 	.product-list
@@ -730,6 +788,17 @@
 				margin-bottom: 5px
 			.product-list__bottom
 				padding-top: 20px
+
+	.cart
+		&__modal
+			&-bottom
+				flex-direction: column
+				& > *
+					margin-bottom: 10px
+					&:last-child
+						margin-bottom: 0
+				.btn
+					font-size: 16px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
@@ -796,6 +865,24 @@
 	.social-wrap
 		&--content
 			margin-bottom: 25px
+
+	.cart
+		&__step
+			&-1, &-4
+				.cart__btns
+					flex-direction: column
+					margin-top: 20px
+					& > *
+						margin-bottom: 10px
+						&:last-child
+							margin-bottom: 0
+			&-list
+				li
+					font-size: 14px
+					&::after
+						margin: 0 5px
+		&__btns
+			margin-top: 20px
 
 @media only screen and (max-width: 420px)
 	.header
