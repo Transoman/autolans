@@ -211,6 +211,24 @@
 				right: 0
 				left: auto
 
+	.contact
+		&__info
+			&-left
+				width: 170px
+			&-right
+				padding-left: 25px
+			&-row
+				padding: 20px 25px
+				svg
+					margin-right: 20px
+		&__schedule-wrap
+			padding: 30px 15px
+		&__mail
+			margin-right: 30px
+		&__phone
+			.phone__right
+				padding-left: 40px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
 	body
@@ -479,6 +497,14 @@
 			font-size: 18px
 		&__question
 			font-size: 16px
+
+	.contact
+		&__info
+			&-wrap
+				border-radius: 3px 3px 0 0
+				border-bottom: 0
+		&__schedule-wrap
+			border-radius: 0 0 3px 3px
 
 
 /* Small Devices, Tablets */
@@ -786,6 +812,22 @@
 			margin-bottom: 30px
 		&__question-wrap
 			padding-top: 30px
+
+	.contact
+		&__info
+			&-row
+				padding: 15px
+		&__phone
+			flex-direction: column
+			.phone__right
+				padding-left: 0
+		&__mail
+			display: inline-block
+			margin-right: 0
+			margin-bottom: 10px
+		&__address
+			span
+				margin-left: 0
 
 
 @media only screen and (max-width: 576px)
