@@ -7,10 +7,13 @@
 		margin-right: 25px
 		&:last-child
 			margin-right: 0
+		&.active
+			a
+				color: $cinnabar
 	a
 		color: #fff
 		&:hover
-			color: #e7463f
+			color: $cinnabar
 	&--footer
 		flex-direction: column
 		li
@@ -34,9 +37,6 @@
 
 .nav-toggle
 	display: none
-	// position: absolute
-	// right: 0
-	// top: 17px
 	width: 28px
 	height: 15px
 	padding: 0

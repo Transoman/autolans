@@ -3,11 +3,11 @@
 	display: flex
 	&:hover
 		.widget-cart__left
-			background-color: #e7463f
+			background-color: $cinnabar
 			&::after
-				border-color: transparent transparent transparent #e7463f
+				border-color: transparent transparent transparent $cinnabar
 		.widget-cart__total
-			color: #e7463f
+			color: $cinnabar
 	a
 		position: absolute
 		top: 0
@@ -16,7 +16,7 @@
 		left: 0
 	&__left
 		position: relative
-		padding: 14px 5px 14px 15px
+		padding: 14px 5px 14px 16px
 		background-color: $accent
 		border-radius: 3px 0 0 3px
 		+transition
@@ -35,15 +35,15 @@
 			color: #fff
 			vertical-align: middle
 	&__right
-		padding: 12px 25px 12px 45px
-		border: 1px solid #c4cdcf
+		padding: 12px 25px 12px 42px
+		border: 1px solid $tiara
 		border-radius: 0 3px 3px 0
 	&__count
 		display: inline-block
 		vertical-align: middle
 		width: 24px
 		height: 24px
-		margin-left: 10px
+		margin-left: 6px
 		background-color: #fff
 		border-radius: 50%
 		font-size: 13px
