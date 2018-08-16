@@ -474,6 +474,12 @@
 		&__content
 			padding: 15px 10px 10px
 
+	.about
+		&__title
+			font-size: 18px
+		&__question
+			font-size: 16px
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px)
@@ -634,6 +640,8 @@
 			h1
 				font-size: 30px
 				line-height: 1.2
+				br
+					display: none
 			img
 				top: 20px
 				bottom: auto
@@ -762,6 +770,23 @@
 			padding: 15px
 			flex-direction: column
 
+	.about
+		&__list
+			&-item
+				width: 100%
+				&:last-child
+					margin-bottom: 0
+				&:nth-last-child(2)
+					&::after
+						display: block
+		&__title
+			br
+				display: none
+		&__descr
+			margin-bottom: 30px
+		&__question-wrap
+			padding-top: 30px
+
 
 @media only screen and (max-width: 576px)
 	.product-list
@@ -882,6 +907,20 @@
 						margin: 0 5px
 		&__btns
 			margin-top: 20px
+
+	.about
+		&__list
+			&-item
+				flex-direction: column
+				text-align: center
+				&::after
+					display: none
+				&:nth-last-child(2)
+					&::after
+						display: none
+			&-icon
+				margin: 0
+				margin-bottom: 15px
 
 @media only screen and (max-width: 420px)
 	.header

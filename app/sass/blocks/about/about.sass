@@ -1,0 +1,58 @@
+.about
+	&__list
+		margin: 0 -15px
+		margin-bottom: 60px
+		padding: 0
+		list-style: none
+		display: flex
+		flex-wrap: wrap
+		&-item
+			position: relative
+			display: flex
+			align-items: center
+			width: 50%
+			padding: 0 15px
+			margin-bottom: 40px
+			font-size: 16px
+			&::after
+				content: ''
+				position: absolute
+				top: 100%
+				left: 45px
+				width: 2px
+				height: 100%
+				background-color: $accent
+			&:nth-last-child(1),
+			&:nth-last-child(2)
+				&::after
+					display: none
+		&-icon
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-shrink: 0
+			+size(61px)
+			margin-right: 20px
+			background-color: $tiara
+			border-radius: 50%
+			outline: 10px solid #fff
+			z-index: 1
+	&__title
+		font-size: 24px
+		font-weight: 500
+		color: $dark-gray
+	&__descr
+		margin-bottom: 50px
+		font-size: 16px
+		font-weight: 300
+	&__question
+		font-size: 18px
+		a
+			font-weight: 500
+			color: inherit
+			&:hover
+				color: $cinnabar
+		&-wrap
+			padding-top: 50px
+			border-top: 1px solid $light-gray
