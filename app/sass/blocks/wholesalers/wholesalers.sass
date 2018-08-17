@@ -1,0 +1,46 @@
+.wholesaler
+	&__left
+		p
+			margin-bottom: 35px
+			font-size: 18px
+			font-weight: 500
+			color: $dark-gray
+			&:last-child
+				margin-bottom: 15px
+	&__link
+		margin-bottom: 40px
+		display: block
+		font-size: 18px
+		font-weight: 500
+	&__content
+		ul
+			margin: 0
+			padding: 0
+			list-style: none
+			column-count: 3
+			margin-bottom: 30px
+			li
+				position: relative
+				padding-left: 25px
+				margin-bottom: 7px
+				font-size: 16px
+				font-weight: 300
+				&::before
+					content: '\e913'
+					font-family: 'icomoon'
+					font-size: 17px
+					position: absolute
+					left: 0
+					top: 0
+					+size(17px)
+					color: $mantis
+		p
+			margin-bottom: 20px
+			font-size: 16px
+			&:last-child
+				margin-bottom: 0
+			a
+				font-weight: 500
+				color: inherit
+				&:hover
+					color: $cinnabar
