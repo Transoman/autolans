@@ -1,0 +1,44 @@
+.news-page
+	&-list
+		margin-bottom: 40px
+		&__item
+			display: flex
+			border: 1px solid $light-gray
+			border-radius: 3px
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+		&__img
+			width: 350px
+			flex-shrink: 0
+		&__content
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 30px
+			p
+				margin-right: 60px
+				&:last-of-type
+					margin-bottom: 0
+	&__btns
+		display: flex
+		justify-content: space-between
+	&__btn
+		&-prev
+			display: flex
+			align-items: center
+			text-align: right
+			i
+				margin-right: 25px
+				padding-right: 20px
+				border-right: 1px solid
+				font-size: 24px
+		&-next
+			display: flex
+			align-items: center
+			text-align: left
+			i
+				margin-left: 25px
+				padding-left: 20px
+				border-left: 1px solid
+				font-size: 24px

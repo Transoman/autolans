@@ -561,6 +561,28 @@
 				&:last-child
 					margin-bottom: 0
 
+	.news-page-list
+		display: flex
+		flex-wrap: wrap
+		&__item
+			flex-direction: column
+			width: 47.91%
+			margin-right: 30px
+			margin-bottom: 20px
+			&:nth-child(2n)
+				margin-right: 0
+		&__img
+			width: auto
+		&__content
+			flex-direction: column
+			align-items: flex-start
+			padding: 15px 15px 20px
+			p
+				margin: 0
+				margin-bottom: 15px
+				&:last-of-type
+					margin-bottom: 15px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px)
 	.top-menu
@@ -904,6 +926,14 @@
 			flex-direction: column
 			justify-content: center
 
+	.news-page-list
+		&__item
+			width: 100%
+			margin-right: 0
+		&__img
+			img
+				width: 100%
+
 
 @media only screen and (max-width: 576px)
 	.product-list
@@ -957,6 +987,21 @@
 			font-size: 16px
 			span
 				display: block
+
+	.news-page
+		&__btns
+			flex-wrap: wrap
+		&__btn
+			&-prev
+				padding-left: 15px
+				padding-right: 20px
+				i
+					padding-right: 15px
+			&-next
+				padding-right: 15px
+				padding-left: 20px
+				i
+					padding-left: 15px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
@@ -1069,6 +1114,15 @@
 			&--faq
 				.container
 					padding: 0
+
+	.news-page
+		&__btns
+			flex-direction: column
+			align-items: center
+			& > *
+				margin-bottom: 20px
+				&:last-child
+					margin-bottom: 0
 
 @media only screen and (max-width: 420px)
 	.header
