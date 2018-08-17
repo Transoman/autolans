@@ -829,6 +829,9 @@
 			span
 				margin-left: 0
 
+	.map
+		height: 400px
+
 
 @media only screen and (max-width: 576px)
 	.product-list
@@ -865,6 +868,23 @@
 						margin-bottom: 0
 				.btn
 					font-size: 16px
+
+	.contact
+		&__info
+			&-row
+				flex-direction: column
+				text-align: center
+			&-left
+				border-right: 0
+				margin-bottom: 15px
+			&-right
+				padding-left: 0
+				display: flex
+				flex-direction: column
+		&__address
+			font-size: 16px
+			span
+				display: block
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
