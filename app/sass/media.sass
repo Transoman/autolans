@@ -239,6 +239,12 @@
 			.delivery__title
 				font-size: 24px
 
+	.faq
+		&__left
+			width: 280px
+		&__name
+			max-width: 210px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
 	body
@@ -515,6 +521,27 @@
 				border-bottom: 0
 		&__schedule-wrap
 			border-radius: 0 0 3px 3px
+
+	.faq
+		&__list
+			margin-bottom: 30px
+		&__question, &__answer
+			display: block
+			padding: 10px 15px
+		&__left
+			width: auto
+			padding: 0
+		&__label
+			position: static
+			right: auto
+			top: auto
+			display: block
+		&__right
+			padding: 0
+		&__name
+			max-width: none
+		.pagination
+			margin-top: 30px
 
 
 /* Small Devices, Tablets */
@@ -909,6 +936,10 @@
 	.heading
 		&__left
 			padding-right: 70px
+		&--faq
+			.heading__left
+				h1
+					font-size: 16px
 
 	.form
 		&__field
@@ -1001,6 +1032,12 @@
 			&-icon
 				margin: 0
 				margin-bottom: 15px
+
+	.main
+		&__container
+			&--faq
+				.container
+					padding: 0
 
 @media only screen and (max-width: 420px)
 	.header

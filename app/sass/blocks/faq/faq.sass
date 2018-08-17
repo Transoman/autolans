@@ -1,0 +1,61 @@
+.faq
+	&__list
+		margin-bottom: 40px
+	&__item
+		border: 1px solid $light-gray
+		border-radius: 3px
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	&__question
+		display: flex
+		padding: 15px 20px
+	&__left
+		position: relative
+		padding-right: 15px
+		width: 325px
+		flex-shrink: 0
+	&__right
+		padding-left: 15px
+		p
+			font-size: 16px
+			color: $mine-shaft
+			&:last-child
+				margin-bottom: 0
+	&__name
+		max-width: 270px
+		margin-bottom: 5px
+		font-size: 18px
+		font-weight: 500
+		color: $dark-gray
+	&__date
+		color: $natural-gray
+	&__label
+		position: absolute
+		right: 15px
+		top: 0
+		color: $natural-gray
+	&__answer
+		display: flex
+		padding: 15px 20px
+		background-color: #f7f8f8
+		.faq__name
+			font-size: 16px
+			color: $chicago
+		.faq__right
+			p
+				font-size: 14px
+				font-weight: 300
+				color: $mine-shaft
+				a
+					text-decoration: underline
+		&--wait
+			.faq__name
+				margin: 0
+				color: $accent
+	&__btn
+		display: block
+		max-width: 185px
+		margin: 0 auto
+	.pagination
+		margin-top: 40px
