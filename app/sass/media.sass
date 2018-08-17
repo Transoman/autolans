@@ -251,6 +251,10 @@
 				width: 50px
 				margin-right: 15px
 
+	.category-list
+		&__item
+			padding-bottom: 10px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
 	body
@@ -583,6 +587,12 @@
 				&:last-of-type
 					margin-bottom: 15px
 
+	.category-list
+		&__item
+			height: calc(100% - 20px)
+			padding-bottom: 25px
+			margin-bottom: 20px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px)
 	.top-menu
@@ -610,6 +620,8 @@
 	.main
 		&__container
 			padding-top: 30px
+			&--category
+				padding-top: 0
 
 	.main-title
 		margin-bottom: 15px
@@ -1003,6 +1015,11 @@
 				i
 					padding-left: 15px
 
+	.category-list
+		&__item
+			margin-right: 17px
+			margin-left: 17px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
 	.heading
@@ -1123,6 +1140,7 @@
 				margin-bottom: 20px
 				&:last-child
 					margin-bottom: 0
+
 
 @media only screen and (max-width: 420px)
 	.header

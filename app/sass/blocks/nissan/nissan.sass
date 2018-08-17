@@ -1,0 +1,23 @@
+.category-list
+	&__item
+		display: flex
+		flex-direction: column
+		border: 1px solid $light-gray
+		border-radius: 3px
+		padding: 25px 25px 35px
+		text-align: center
+		height: calc(100% - 30px)
+		margin-bottom: 30px
+		&:hover
+			box-shadow: 0 4px 20px rgba(#000, 0.12)
+			h3
+				color: $cinnabar
+	&__img
+		margin-bottom: 25px
+	h3
+		margin: 0
+		margin-top: auto
+		font-size: 18px
+		font-weight: 500
+		color: $dark-gray
+		+transition
