@@ -1,0 +1,41 @@
+.delivery
+	padding-bottom: 40px
+	&__title
+		font-size: 24px
+		font-weight: 500
+		color: $dark-gray
+		&--red
+			color: $accent
+	&__content
+		padding-right: 95px
+		margin-bottom: 25px
+		ul
+			margin: 0
+			padding: 0
+			list-style: none
+			li
+				position: relative
+				padding-left: 23px
+				font-size: 16px
+				margin-bottom: 15px
+				&:last-child
+					margin-bottom: 0
+				&::before
+					content: '\e913'
+					font-family: 'icomoon'
+					font-size: 17px
+					color: $mantis
+					position: absolute
+					left: 0
+					top: 0
+		p
+			font-size: 16px
+			a
+				text-decoration: underline
+	&-bottom
+		padding-top: 45px
+		border-top: 1px solid $light-gray
+		p
+			font-size: 16px
+			&:last-child
+				margin-bottom: 0
