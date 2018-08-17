@@ -245,6 +245,12 @@
 		&__name
 			max-width: 210px
 
+	.how-order
+		&__list
+			&-number
+				width: 50px
+				margin-right: 15px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
 	body
@@ -543,6 +549,17 @@
 		.pagination
 			margin-top: 30px
 
+	.how-order
+		&__list
+			li
+				font-size: 16px
+		&__pay
+			flex-wrap: wrap
+			justify-content: space-around
+			&-item
+				margin-bottom: 40px
+				&:last-child
+					margin-bottom: 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px)
@@ -877,6 +894,16 @@
 				li
 					margin-bottom: 20px
 
+	.how-order
+		&__list
+			li
+				font-size: 20px
+		&__pay
+			max-width: 320px
+			margin: 0 auto
+			flex-direction: column
+			justify-content: center
+
 
 @media only screen and (max-width: 576px)
 	.product-list
@@ -940,6 +967,10 @@
 			.heading__left
 				h1
 					font-size: 16px
+		&--how-order
+			.heading__left
+				h1
+					font-size: 24px
 
 	.form
 		&__field
@@ -1108,6 +1139,10 @@
 	.heading
 		.container
 			padding: 0
+		&--how-order
+			.heading__left
+				h1
+					font-size: 20px
 
 	.news-list
 		&__date
@@ -1144,6 +1179,19 @@
 	.social-wrap
 		&--content
 			margin-bottom: 20px
+
+	.how-order
+		&__list
+			li
+				font-size: 18px
+		&__pay
+			max-width: none
+			align-items: center
+			&-item
+				padding-left: 65px
+				img
+					width: 55px
+					height: 55px
 
 
 /* Custom, iPhone Retina */

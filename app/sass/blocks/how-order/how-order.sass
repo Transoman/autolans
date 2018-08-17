@@ -1,0 +1,62 @@
+.how-order
+	padding-bottom: 50px
+	&__title
+		margin-bottom: 35px
+		font-size: 24px
+		font-weight: 500
+		&--red
+			color: $accent
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+		li
+			position: relative
+			display: flex
+			align-items: center
+			margin-bottom: 15px
+			font-size: 20px
+			line-height: 1.2
+		&-number
+			display: inline-block
+			width: 60px
+			margin-right: 25px
+			font-size: 36px
+			line-height: 1
+			font-weight: 500
+			color: $accent
+			text-align: center
+			border-right: 2px solid $light-gray
+			&:last-child
+				margin-bottom: 0
+	&__content
+		p
+			font-size: 16px
+			font-weight: 300
+			a
+				color: inherit
+				font-weight: 500
+				&:hover
+					color: $cinnabar
+	&-bottom
+		padding-top: 50px
+		border-top: 1px solid $light-gray
+	&__pay
+		display: flex
+		justify-content: space-between
+		&-item
+			position: relative
+			padding-left: 75px
+			img
+				position: absolute
+				top: 0
+				left: 0
+			span
+				font-size: 18px
+				font-weight: 500
+				color: $tapa
+			p
+				margin: 0
+				font-size: 24px
+				font-weight: 500
+				color: $dark-gray
