@@ -20,6 +20,7 @@
 				padding: 10px 15px
 				color: $dov-gray
 				img
+					flex-shrink: 0
 					margin-right: 15px
 					border: 1px solid transparent
 					+transition
@@ -50,10 +51,17 @@
 			font-size: 16px
 			font-weight: 300
 	&__date
+		position: relative
 		padding-left: 28px
 		color: $silver-sand
 		&::before
 			content: ''
+			position: absolute
+			left: 0
+			top: 1px
+			width: 15px
+			height: 15px
+			background: url('../img/icon/icon-calendar.svg') no-repeat center
 	&__all
 		position: absolute
 		right: 198px

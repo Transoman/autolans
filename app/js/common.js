@@ -41,7 +41,10 @@ jQuery(document).ready(function($) {
     }
   }
 
-  newsAllTop();
+  setTimeout(function(){
+    newsAllTop();
+  }, 500);
+
 
   // Product tabs
   $('.product-tabs').tabslet();
@@ -421,7 +424,7 @@ jQuery(document).ready(function($) {
   'use strict';
 
   var file     = 'img/symbols.html',
-      revision = 1.5;
+      revision = 1.1;
 
   if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
       return true;
