@@ -8,6 +8,10 @@ jQuery(document).ready(function($) {
     $('body').toggleClass('active');
   });
 
+  $('.mobile-menu__caret').click(function() {
+    $(this).parent().toggleClass('active');
+  });
+
   // Sticky header
   $(window).scroll(function() {
     var h = $('.top-menu').outerHeight();
@@ -271,6 +275,27 @@ jQuery(document).ready(function($) {
     },
   });
 
+  // Enter only number
+  $("input[name='price']").keydown(function (e) {
+    // Allow: backspace, delete, tab, escape, enter and .
+    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+         // Allow: Ctrl/cmd+A
+        (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+         // Allow: Ctrl/cmd+C
+        (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+         // Allow: Ctrl/cmd+X
+        (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+         // Allow: home, end, left, right
+        (e.keyCode >= 35 && e.keyCode <= 39)) {
+             // let it happen, don't do anything
+             return;
+    }
+    // Ensure that it is a number and stop the keypress
+    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+        e.preventDefault();
+    }
+  });
+
   // Form
   $('.form__field, .form__textarea').focus(function() {
     $(this).prev('.form__label').addClass('is-focus');
@@ -309,6 +334,30 @@ jQuery(document).ready(function($) {
     submitHandler: function(form) {
       var t = $('.callback-form').serialize();
       ajaxSend('.callback-form', t);
+    }
+  });
+
+  $(".question-form").validate({
+    messages: {
+      name: "Введите Ваше имя",
+      email: "Введите Ваш E-mail",
+      question: "Введите Ваш вопрос",
+    },
+    submitHandler: function(form) {
+      var t = $('.question-form').serialize();
+      ajaxSend('.question-form', t);
+    }
+  });
+
+  $(".you-pice-form").validate({
+    messages: {
+      name: "Введите Ваше имя",
+      email: "Введите Ваш E-mail",
+      price: "Введите желаемую цену",
+    },
+    submitHandler: function(form) {
+      var t = $('.you-pice-form').serialize();
+      ajaxSend('.you-pice-form', t);
     }
   });
 

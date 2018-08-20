@@ -122,6 +122,50 @@
         font-size: 14px
         &:hover
           color: $accent
+  &--megamenu
+    & > li
+      &.menu-item-has-children
+        &:hover
+          > .sub-menu
+            display: block
+      & > .sub-menu
+        width: 730px
+        padding: 25px 30px
+        column-count: 4
+        li
+          border: none
+          width: 100%
+          &.menu-item-has-children
+            &::after
+              display: none
+          & > .sub-menu
+            position: static
+            left: auto
+            top: auto
+            display: block
+            width: auto
+            box-shadow: none
+            li
+              border: 0
+              margin-bottom: 5px
+              &:last-child
+                margin-bottom: 0
+              a
+                font-size: 14px
+                color: $gray-2
+                &:hover
+                  color: $accent
+          a
+            padding: 0
+          &:hover
+            background: none
+        & > li
+          display: inline-block
+          margin-bottom: 15px
+          & > a
+            margin-bottom: 10px
+            font-size: 16px
+            font-weight: 700
 
 @keyframes slideUp
   0%
