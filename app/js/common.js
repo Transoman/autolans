@@ -211,6 +211,7 @@ jQuery(document).ready(function($) {
             $price = $button.parent().parent().find('.cart__price').data('price');
             $price = $button.parent().parent().parent().find('.cart__price').data('price');
             $button.parent().parent().next().find('span').text($price * $qty.val());
+            cartSum();
         }
 
         if ( $button.hasClass( 'quantity__plus' ) && current < max ) {
@@ -218,11 +219,23 @@ jQuery(document).ready(function($) {
             $qty.trigger( 'change' );
             $price = $button.parent().parent().parent().find('.cart__price').data('price');
             $button.parent().parent().next().find('span').text($price * $qty.val());
+            cartSum();
         }
     });
   }
 
   changeProductQuantity();
+
+  function cartSum() {
+    var sum = 0;
+    $('.cart__item-sum span').each(function(index, el) {
+      sum += parseInt($(el).text(), 10);
+    });
+
+    $('.cart__total span').text(sum);
+  }
+
+  cartSum();
 
   // Change product image
   $('.product-gallery__thumbnails img').click(function(){
@@ -258,11 +271,9 @@ jQuery(document).ready(function($) {
   // Modal
   $('.modal').popup({
     transition: 'all 0.3s',
-    // onopen: function () {
-    //   console.log($(this).find('input:first'));
-    //   var firstInput = $(this).find('input:first');
-    //   $(firstInput).focus();
-    // },
+    scrolllock: true,
+    // setzindex: true,
+    autozindex: true,
     onclose: function() {
       $(this).find('label.error').remove();
     }
