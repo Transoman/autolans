@@ -272,6 +272,12 @@
 				img
 					transform: translateX(-25%)
 
+	.how-order
+		&__pay
+			padding: 0
+			&-group
+				margin-right: 40px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
 	body
@@ -575,10 +581,9 @@
 			li
 				font-size: 16px
 		&__pay
-			flex-wrap: wrap
-			justify-content: space-around
-			&-item
-				margin-bottom: 40px
+			justify-content: center
+			&-group
+				margin-bottom: 15px
 				&:last-child
 					margin-bottom: 0
 
@@ -978,10 +983,8 @@
 			li
 				font-size: 20px
 		&__pay
-			max-width: 320px
-			margin: 0 auto
-			flex-direction: column
-			justify-content: center
+			&-group
+				margin-right: 15px
 
 	.news-page-list
 		&__item
@@ -1193,7 +1196,6 @@
 				&:last-child
 					margin-bottom: 0
 
-
 @media only screen and (max-width: 420px)
 	.header
 		&__phone
@@ -1309,14 +1311,12 @@
 			li
 				font-size: 18px
 		&__pay
-			max-width: none
-			align-items: center
+			&-group
+				margin-right: 10px
+				&:nth-child(4)
+					margin-right: 0
 			&-item
-				padding-left: 65px
-				img
-					width: 55px
-					height: 55px
-
+				margin-right: 10px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px)

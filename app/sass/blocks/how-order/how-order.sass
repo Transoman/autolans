@@ -36,24 +36,22 @@
 			a
 				font-weight: 500
 	&-bottom
-		padding-top: 50px
+		padding-top: 15px
 		border-top: 1px solid $light-gray
+		.how-order__title
+			margin-bottom: 30px
 	&__pay
 		display: flex
-		justify-content: space-between
+		flex-wrap: wrap
+		padding: 0 35px
+		&-group
+			display: flex
+			// flex-wrap: wrap
+			margin-right: 70px
+			&:last-child
+				margin-right: 0
 		&-item
-			position: relative
-			padding-left: 75px
-			img
-				position: absolute
-				top: 0
-				left: 0
-			span
-				font-size: 18px
-				font-weight: 500
-				color: $tapa
-			p
-				margin: 0
-				font-size: 24px
-				font-weight: 500
-				color: $dark-gray
+			margin-right: 15px
+			flex-shrink: 0
+			&:last-child
+				margin-right: 0
