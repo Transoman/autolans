@@ -272,7 +272,6 @@ jQuery(document).ready(function($) {
   $('.modal').popup({
     transition: 'all 0.3s',
     scrolllock: true,
-    // setzindex: true,
     autozindex: true,
     onclose: function() {
       $(this).find('label.error').remove();
@@ -399,7 +398,6 @@ jQuery(document).ready(function($) {
       terms: "Вы должны быть согласны"
     },
     submitHandler: function(form) {
-      console.log('submit');
       var t = $('.cart-form').serialize();
       ajaxSend('.cart-form', t);
     }

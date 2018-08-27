@@ -262,6 +262,16 @@
 		&__item
 			padding: 20px
 
+	.heading
+		&--about
+			.heading__right
+				img
+					transform: translateX(-25%)
+		&--faq
+			.heading__right
+				img
+					transform: translateX(-25%)
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
 	body
@@ -608,6 +618,12 @@
 		&__link
 			margin-bottom: 25px
 
+	.heading
+		&--faq
+			.heading__right
+				img
+					transform: translateX(-30%)
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px)
 	.top-menu
@@ -781,6 +797,14 @@
 		&--wholesaler
 			p
 				font-size: 16px
+		&--about
+			.heading__right
+				img
+					transform: none
+		&--faq
+			.heading__right
+				img
+					transform: none
 
 	.news-list
 		&__item
