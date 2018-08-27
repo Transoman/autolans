@@ -350,6 +350,16 @@ jQuery(document).ready(function($) {
     }
   });
 
+  $(".subscribe-form").validate({
+    messages: {
+      email: "Введите Ваш E-mail"
+    },
+    submitHandler: function(form) {
+      var t = $('.subscribe-form').serialize();
+      ajaxSend('.subscribe-form', t);
+    }
+  });
+
   $(".question-form").validate({
     messages: {
       name: "Введите Ваше имя",
