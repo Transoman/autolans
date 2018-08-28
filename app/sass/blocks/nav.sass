@@ -17,20 +17,20 @@
 	&--footer
 		flex-direction: column
 		li
+			position: relative
 			margin: 0
 			margin-bottom: 5px
+			padding-left: 23px
 			&:last-child
 				margin-bottom: 0
 		a
-			position: relative
 			font-size: 16px
 			color: $gray-chateau
-			padding-left: 23px
 			&::before
 				content: ''
 				position: absolute
 				left: 0
-				top: 50%
+				top: 13px
 				width: 12px
 				height: 1px
 				background-color: $accent
