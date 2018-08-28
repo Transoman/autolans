@@ -136,6 +136,18 @@ jQuery(document).ready(function($) {
     showTab(currentTab);
   }
 
+  $('#pay').change(function(event) {
+    if ( $(this).val() == 'Оплатить на сайте' ) {
+      $('.cart__pay-wrap').slideDown();
+    }
+    else {
+      $('.cart__pay-wrap').slideUp();
+      $('.cart__pay-wrap').find('input[type=radio]').each(function(index, el) {
+        $(el).prop('checked', false);
+      });
+    }
+  });
+
   // Fancybox
   $('a[data-fancybox]').fancybox();
 
@@ -289,7 +301,7 @@ jQuery(document).ready(function($) {
   });
 
   // Enter only number
-  $("input[name='price']").keydown(function (e) {
+  $("input[name='price'], input[name='discount']").keydown(function (e) {
     // Allow: backspace, delete, tab, escape, enter and .
     if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
          // Allow: Ctrl/cmd+A
@@ -405,7 +417,13 @@ jQuery(document).ready(function($) {
       name: "Введите Ваше имя",
       email: "Введите Ваш E-mail",
       phone: "Введите Ваш телефон",
-      terms: "Вы должны быть согласны"
+      terms: "Вы должны быть согласны",
+      'payment-method': "Выберите способ оплаты"
+    },
+    rules: {
+      'payment-method': {
+        required: ".cart__pay-wrap:visible"
+      }
     },
     submitHandler: function(form) {
       var t = $('.cart-form').serialize();

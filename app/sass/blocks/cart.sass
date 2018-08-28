@@ -153,3 +153,26 @@
 			margin-bottom: 35px
 			font-size: 30px
 			line-height: 1
+	&__pay
+		column-count: 4
+		&-wrap
+			display: none
+			.form-group
+				margin-bottom: 20px
+			.form__radio
+				&:checked ~ .form__radio-label
+					color: $cinnabar
+					img
+						border: 3px solid $accent
+			.form__radio-label
+				+transition
+				img
+					margin-right: 10px
+					border-radius: 50%
+					overflow: hidden
+					border: 0 solid transparent
+					+transition
+				&:hover
+					color: $cinnabar
+					img
+						border: 3px solid $accent

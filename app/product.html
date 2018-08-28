@@ -810,52 +810,6 @@
 			</div>
 		</div>
 
-		<div id="question" class="modal">
-			<button class="question_close modal__close">
-				Close
-				<span class="modal__close-line"></span>
-			</button>
-
-			<div class="modal__top">
-				<h3>Заполните поля</h3>
-			</div>
-
-			<div class="modal__content">
-				<form action="sendmail.php" class="row form question-form" method="post">
-
-					<input type="hidden" name="subject" value="Вопрос">
-
-					<div class="col-12 form-group">
-						<label for="name" class="form__label">Ваше имя</label>
-						<input type="text" id="name" class="form__field" name="name" required>
-					</div>
-
-					<div class="col-12 form-group">
-						<label for="email" class="form__label">Ваш E-mail</label>
-						<input type="email" id="email" name="email" class="form__field" required>
-					</div>
-
-					<div class="col-12 form-group">
-						<label for="question" class="form__label">Текст вопроса</label>
-						<textarea name="question" id="question" class="form__textarea" required></textarea>
-					</div>
-
-					<div class="col-12">
-						<small class="form__note">Сообщение появится после проверки администратором сайта</small>
-					</div>
-
-					<div class="col-12 form-group">
-
-					</div>
-
-					<div class="form-group form-group--btn">
-						<input type="submit" class="btn form__btn" name="submit" value="Отправить">
-					</div>
-
-				</form>
-			</div>
-		</div>
-
 		<div id="you-price" class="modal">
 			<button class="you-price_close modal__close">
 				Close
@@ -890,6 +844,52 @@
 					<div class="col-12 form-group">
 						<label for="price" class="form__label">Желаемая цена (руб.)</label>
 						<input type="price" id="price" name="price" class="form__field" required>
+					</div>
+
+					<div class="col-12 form-group">
+
+					</div>
+
+					<div class="form-group form-group--btn">
+						<input type="submit" class="btn form__btn" name="submit" value="Отправить">
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+		<div id="question" class="modal">
+			<button class="question_close modal__close">
+				Close
+				<span class="modal__close-line"></span>
+			</button>
+
+			<div class="modal__top">
+				<h3>Задать вопрос</h3>
+			</div>
+
+			<div class="modal__content">
+				<form action="sendmail.php" class="row form question-form" method="post">
+
+					<input type="hidden" name="subject" value="Вопрос">
+
+					<div class="col-12 form-group">
+						<label for="name" class="form__label">Ваше имя</label>
+						<input type="text" id="name" class="form__field" name="name" required>
+					</div>
+
+					<div class="col-12 form-group">
+						<label for="email" class="form__label">Ваш E-mail</label>
+						<input type="email" id="email" name="email" class="form__field" required>
+					</div>
+
+					<div class="col-12 form-group">
+						<label for="question" class="form__label">Текст вопроса</label>
+						<textarea name="question" id="question" class="form__textarea" required></textarea>
+					</div>
+
+					<div class="col-12">
+						<small class="form__note">Наши менеджеры скоро свяжутся с Вами</small>
 					</div>
 
 					<div class="col-12 form-group">
@@ -1006,7 +1006,12 @@
 					<div class="cart__wrap row">
 						<div class="col-12 form-group">
 							<select name="delivery" id="delivery" class="form__select">
-								<option value="Доставка до адреса в пределах МКАД - в вечернее время с 18:00 до 20:00 - 1 500 руб.">Доставка до адреса в пределах МКАД - в вечернее время с 18:00 до 20:00 - 1 500 руб.</option>
+								<option value="Доставка до адреса в пределах МКАД - в течение 2-х дней после оформления заказа - 500 руб.">Доставка до адреса в пределах МКАД - в течение 2-х дней после оформления заказа - 500 руб.</option>
+								<option value="Доставка до адреса за МКАД - в течение 2-х дней после оформления заказа - 500+30 (за каждый км пути)">Доставка до адреса за МКАД - в течение 2-х дней после оформления заказа - 500+30 (за каждый км пути)</option>
+								<option value="Доставка Почтой России - 390 руб.">Доставка Почтой России - 390 руб.</option>
+								<option value="Доставка до транспортной компании в пределах МКАД (кроме ПЭК или Деловые Линии) - 500 руб.">Доставка до транспортной компании в пределах МКАД (кроме ПЭК или Деловые Линии) - 500 руб.</option>
+								<option value="Доставка до транспортной компании ПЭК или Деловые Линии в пределах МКАД - бесплатно">Доставка до транспортной компании ПЭК или Деловые Линии в пределах МКАД - бесплатно</option>
+								<option value="Самовывоз - бесплатно">Самовывоз - бесплатно</option>
 							</select>
 						</div>
 						<div class="col-12 form-group">
@@ -1044,9 +1049,15 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-12 col-md-6 form-group">
-							<label for="spare-2" class="form__label">Интересующие Вас запчасти</label>
-							<textarea name="spare_2" id="spare-2" class="form__textarea" required></textarea>
+						<div class="col-12 col-md-6">
+							<div class="col-12 form-group">
+								<label for="discount" class="form__label">Дисконтная карта, №</label>
+								<input type="text" name="discount" id="discount" class="form__field">
+							</div>
+							<div class="form-group">
+								<label for="info" class="form__label">Дополнительная информация</label>
+								<textarea name="info" id="info" class="form__textarea"></textarea>
+							</div>
 						</div>
 						<div class="col-12 form-group">
 							<input type="checkbox" name="terms" id="terms" class="form__checkbox visually-hidden" required>
@@ -1069,7 +1080,94 @@
 						<div class="col-12 form-group">
 							<select name="pay" id="pay" class="form__select">
 								<option value="Наличными курьеру (по г. Москва и МО)">Наличными курьеру (по г. Москва и МО)</option>
+								<option value="Оплатить на сайте">Оплатить на сайте</option>
 							</select>
+						</div>
+						<div class="col-12 cart__pay-wrap">
+
+							<div class="cart__pay">
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="visa" class="form__radio">
+									<label for="visa" class="form__radio-label">
+										<img src="img/content/pay/pay-2.png" alt="" width="40" height="40">
+										<span>Visa</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="mastrecard" class="form__radio">
+									<label for="mastrecard" class="form__radio-label">
+										<img src="img/content/pay/pay-3.png" alt="" width="40" height="40">
+										<span>Mastrecard</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="maestro" class="form__radio">
+									<label for="maestro" class="form__radio-label">
+										<img src="img/content/pay/pay-4.png" alt="" width="40" height="40">
+										<span>Maestro</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="mir" class="form__radio">
+									<label for="mir" class="form__radio-label">
+										<img src="img/content/pay/pay-5.png" alt="" width="40" height="40">
+										<span>Мир</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="yandex" class="form__radio">
+									<label for="yandex" class="form__radio-label">
+										<img src="img/content/pay/pay-6.png" alt="" width="40" height="40">
+										<span>Яндекс</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="webmoney" class="form__radio">
+									<label for="webmoney" class="form__radio-label">
+										<img src="img/content/pay/pay-8.png" alt="" width="40" height="40">
+										<span>Webmoney</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="qiwi" class="form__radio">
+									<label for="qiwi" class="form__radio-label">
+										<img src="img/content/pay/pay-7.png" alt="" width="40" height="40">
+										<span>Qiwi</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="sberbank" class="form__radio">
+									<label for="sberbank" class="form__radio-label">
+										<img src="img/content/pay/pay-9.png" alt="" width="40" height="40">
+										<span>Сбербанк онлайн</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="alfa" class="form__radio">
+									<label for="alfa" class="form__radio-label">
+										<img src="img/content/pay/pay-10.png" alt="" width="40" height="40">
+										<span>Альфа клик</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="prombank" class="form__radio">
+									<label for="prombank" class="form__radio-label">
+										<img src="img/content/pay/pay-11.png" alt="" width="40" height="40">
+										<span>Промсвязьбанк</span>
+									</label>
+								</div>
+								<div class="form-group">
+									<input type="radio" name="payment-method" id="cash" class="form__radio">
+									<label for="cash" class="form__radio-label">
+										<img src="img/content/pay/pay-1.png" alt="" width="40" height="40">
+										<span>Наличные</span>
+									</label>
+								</div>
+							</div>
+							<!-- /.cart__pay-wrap -->
+
+							<label for="payment-method" class="error">Выберите способ оплаты</label>
+
 						</div>
 					</div>
 
