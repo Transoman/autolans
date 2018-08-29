@@ -17,10 +17,14 @@
 		padding: 10px 40px 10px 20px
 		font-size: 16px
 		color: $dark-gray
+		border: 1px solid $light-gray
 		border-radius: 3px
-		border-color: $light-gray
+		appearance: none
 		cursor: pointer
 		+transition
+		background: url('../img/icon/icon-down-arrow.svg') no-repeat calc(100% - 10px) center / 10px 10px
+		&::-ms-expand
+			display: none
 		&:focus
 			outline: none
 			border-color: $silver-sand

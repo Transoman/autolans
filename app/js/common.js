@@ -273,11 +273,18 @@ jQuery(document).ready(function($) {
     }
   }
 
-
   // Open VIN form
   $('.form-search__vin').click(function(e) {
     e.preventDefault();
     $('.form-search-vin-wrap').toggleClass('open');
+    $('body').toggleClass('open');
+    document.onkeydown = function(evt) {
+    evt = evt || window.event;
+      if (evt.keyCode == 27) {
+        $('.form-search-vin-wrap').removeClass('open');
+        $('body').removeClass('open');
+      }
+    };
   });
 
   // Modal

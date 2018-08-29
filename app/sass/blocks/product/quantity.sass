@@ -8,7 +8,8 @@
 	border: 1px solid $light-gray
 	border-radius: 3px
 	box-shadow: none
-	appearance: textfield
+	appearance: none
+	-moz-appearance: textfield
 	&::-webkit-inner-spin-button,
 	&::-webkit-outer-spin-button
 		appearance: none
@@ -20,10 +21,12 @@
 		top: 1px
 		bottom: 1px
 		width: 35px
+		padding: 0
 		background: #fff
 		border: 0
 		font-size: 24px
 		font-weight: 500
+		line-height: 1
 		z-index: 1
 		cursor: pointer
 		+transition

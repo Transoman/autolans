@@ -65,14 +65,14 @@ gulp.task('js', function() {
 
 gulp.task('script', function() {
 	return gulp.src([
-			'app/libs/jQuery/dist/jquery.min.js',
-			'app/libs/Tabslet/jquery.tabslet.min.js',
-			'app/libs/jquery-popup-overlay/jquery.popupoverlay.js',
-			'app/libs/jquery-validation/dist/jquery.validate.js',
-			'app/libs/jquery-mask-plugin/dist/jquery.mask.min.js',
-			'app/libs/swiper/dist/js/swiper.min.js',
-			'app/libs/elevatezoom3/jquery.elevateZoom-3.0.8.min.js',
-			'app/libs/fancybox/dist/jquery.fancybox.min.js'
+			'node_modules/jquery/dist/jquery.min.js',
+			'node_modules/tabslet/jquery.tabslet.min.js',
+			'node_modules/jquery-popup-overlay/jquery.popupoverlay.js',
+			'node_modules/jquery-validation/dist/jquery.validate.min.js',
+			'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
+			'node_modules/swiper/dist/js/swiper.min.js',
+			'node_modules/@zeitiger/elevatezoom/jquery.elevateZoom-3.0.8.min.js',
+			'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js'
 		])
 	.pipe(concat('script.js'))
 	// .pipe(uglify())
@@ -153,4 +153,4 @@ gulp.task('build', ['clean', 'styles', 'images', 'svg'], function(){
 });
 
 
-gulp.task('default', ['styles', 'js', 'browser-sync', 'watch']);
+gulp.task('default', ['styles', 'js', 'script', 'browser-sync', 'watch']);
