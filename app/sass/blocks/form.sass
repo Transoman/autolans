@@ -1,7 +1,7 @@
 .form
 	&-group
 		position: relative
-		margin-bottom: 30px
+		margin-bottom: 20px
 		&:last-child
 			margin-bottom: 0
 	&__label
@@ -28,12 +28,13 @@
 				transform: none
 	&__field, &__textarea
 		width: 100%
-		padding: 13px 0
+		padding: 13px 0 5px
 		border: 0
 		border-bottom: 1px solid $tiara
 		font-size: 18px
 		color: $dark-gray
 		border-radius: 0
+		background-color: transparent
 		+transition
 		&:focus
 			outline: none
@@ -41,8 +42,7 @@
 		&--fill
 			background-color: #e9eaeb
 			border: 0
-			padding-left: 20px
-			padding-right: 20px
+			padding: 13px 20px
 	&__textarea
 		height: 120px
 	&__select

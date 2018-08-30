@@ -25,7 +25,7 @@
 					color: $accent
 		&-3
 			.form__textarea
-				height: 140px
+				height: 114px
 			.form__checkbox-label
 				margin-top: 30px
 	&__table
@@ -153,26 +153,36 @@
 			margin-bottom: 35px
 			font-size: 30px
 			line-height: 1
+		&-logo
+			float: right
 	&__pay
 		column-count: 4
 		&-wrap
 			display: none
 			.form-group
+				display: inline-block
+				vertical-align: top
+				width: 100%
 				margin-bottom: 20px
 			.form__radio
 				&:checked ~ .form__radio-label
 					color: $cinnabar
-					img
-						border: 3px solid $accent
+					border-color: $light-gray
 			.form__radio-label
+				display: block
+				margin: 0
+				padding: 5px
+				border: 1px solid transparent
+				border-radius: 3px
 				+transition
+				white-space: nowrap
 				img
 					margin-right: 10px
 					border-radius: 50%
 					overflow: hidden
-					border: 0 solid transparent
-					+transition
 				&:hover
 					color: $cinnabar
-					img
-						border: 3px solid $accent
+					border-color: $light-gray
+				&:active
+					color: $cinnabar
+					border-color: $cinnabar

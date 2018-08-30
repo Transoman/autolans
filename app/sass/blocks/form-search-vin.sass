@@ -1,24 +1,55 @@
-.form-search-vin-wrap
-	position: absolute
-	display: none
-	top: calc(100% + 25px)
-	left: -15px
-	right: -15px
-	padding: 0 15px 15px
-	background-color: #fff
-	z-index: 11
-	animation: op 0.25s ease
-	border: 1px solid $light-gray
-	box-shadow: 0 2px 4px rgba(#000, 0.15)
-	&.open
-		display: block
-	h3
-		margin-bottom: 25px
-		font-weight: 400
-		font-size: 24px
-		color: #000
-
 .form-search-vin
+	&-wrap
+		position: absolute
+		display: none
+		top: calc(100% + 25px)
+		left: 0
+		right: 0
+		padding: 20px 40px
+		background-color: $porcelain
+		z-index: 11
+		animation: op 0.25s ease
+		border: 1px solid $light-gray
+		border-radius: 3px
+		box-shadow: 0 2px 4px rgba(#000, 0.15)
+		&.open
+			display: block
+		h3
+			margin-bottom: 25px
+			font-weight: 400
+			font-size: 24px
+			color: #000
+	&__close
+		position: absolute
+		top: -1px
+		right: -1px
+		+size(30px)
+		padding: 0
+		margin: 0
+		outline: none
+		border: none
+		background-color: $accent
+		border-radius: 0 3px 0 0
+		cursor: pointer
+		+transition
+		&::after, &::before
+			content: ''
+			position: absolute
+			left: 3px
+			top: 50%
+			display: block
+			height: 2px
+			width: 80%
+			background-color: #fff
+			+transition
+		&::before
+			transform: rotate(-45deg)
+		&::after
+			transform: rotate(45deg)
+		&:hover
+			background-color: $cinnabar
+		&:focus
+			outline: none
 	.form-group--btn
 		margin-left: auto
 

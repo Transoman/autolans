@@ -287,6 +287,12 @@ jQuery(document).ready(function($) {
     };
   });
 
+  $('.form-search-vin__close').click(function(e) {
+    e.preventDefault();
+    $('.form-search-vin-wrap').removeClass('open');
+    $('body').removeClass('open');
+  });
+
   // Modal
   $('.modal').popup({
     transition: 'all 0.3s',
