@@ -161,7 +161,7 @@ gulp.task('build', ['clean', 'styles', 'images', 'svg'], function(){
 
 gulp.task('watch', function() {
 	gulp.watch('app/sass/**/*.sass', ['styles']);
-	gulp.watch('app/*.html', ['html']);
+	gulp.watch('app/**/*.html', ['html']);
 	gulp.watch('app/fonts/**/*', ['fonts']);
 	gulp.watch('app/img/**/*', ['images']);
 	gulp.watch('app/js/common.js', ['js']);

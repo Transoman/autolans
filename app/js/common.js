@@ -273,6 +273,27 @@ jQuery(document).ready(function($) {
     }
   }
 
+  var youtube = $('.youtube');
+  $.each(youtube, function(index, el) {
+    var source = "https://img.youtube.com/vi/"+ $(el).data('embed') +"/sddefault.jpg";
+    var image = new Image();
+    image.src = source;
+    image.addEventListener( "load", function() {
+      youtube[ index ].append( image );
+    }( index ) );
+
+    // $(el).on('click', function() {
+    //   var iframe = document.createElement( "iframe" );
+
+    //   iframe.setAttribute( "frameborder", "0" );
+    //   iframe.setAttribute( "allowfullscreen", "" );
+    //   iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ $(this).data('embed') +"?rel=0&showinfo=0&autoplay=1" );
+    //   $(this).innerHTML = "";
+    //   $(this).append( iframe );
+    //   $(this).find('.play-button').hide();
+    // });
+  });
+
   // Open VIN form
   $('.form-search__vin').click(function(e) {
     e.preventDefault();
@@ -397,15 +418,15 @@ jQuery(document).ready(function($) {
     }
   });
 
-  $(".you-pice-form").validate({
+  $(".you-price-form").validate({
     messages: {
       name: "Введите Ваше имя",
       email: "Введите Ваш E-mail",
       price: "Введите желаемую цену",
     },
     submitHandler: function(form) {
-      var t = $('.you-pice-form').serialize();
-      ajaxSend('.you-pice-form', t);
+      var t = $('.you-price-form').serialize();
+      ajaxSend('.you-price-form', t);
     }
   });
 
