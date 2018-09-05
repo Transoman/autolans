@@ -150,16 +150,6 @@
 		&__view
 			margin-right: 10px
 
-	.filter
-		&__label
-			margin-right: 15px
-		&__btn
-			margin-right: 15px
-			font-size: 15px
-			&:nth-child(4),
-			&:nth-child(6)
-				margin-right: 25px
-
 	.product-list
 		&__item
 			width: 32.6%
@@ -189,6 +179,8 @@
 			.product-list__bottom
 				padding-left: 20px
 				padding-right: 60px
+			.product-list__buy
+				right: 100px
 
 	.product
 		&__content
@@ -464,9 +456,6 @@
 			.product-list__img-wrap
 				flex: 0 0 250px
 				max-width: 250px
-				img
-					width: auto
-					height: auto
 		&.line
 			.ribbon
 				top: 0
@@ -481,24 +470,18 @@
 				font-size: 14px
 			.product-list__info
 				flex-basis: 200px
+			.product-list__content
+				padding-top: 25px
+				padding-bottom: 25px
 			.product-list__price
 				display: block
 				margin-left: 0
 				font-size: 24px
-
-	.sorting
-		flex-direction: column
-		&__left
-			margin-bottom: 10px
-
-	.filter
-		flex-wrap: wrap
-		&__label
-			margin-bottom: 10px
-		&__btn
-			margin-bottom: 10px
-			&:nth-child(4), &:nth-child(6)
-				margin-right: 15px
+			.product-list__bottom
+				align-self: flex-start
+			.product-list__buy
+				right: 35px
+				bottom: 15px
 
 	.product-gallery
 		border: 0
@@ -817,6 +800,11 @@
 				img
 					transform: none
 
+	.sorting
+		flex-direction: column
+		&__left
+			margin-bottom: 10px
+
 	.news-list
 		&__item
 			flex-wrap: wrap
@@ -845,16 +833,22 @@
 					height: 100%
 		&.line
 			.product-list__item
+				flex-direction: column
+				width: 49%
+				margin-right: 10px
 				margin-bottom: 30px
-				margin-top: 0
+				&:nth-child(2n)
+					margin-right: 0
 			.product-list__img-wrap
-				flex: 0 0 250px
-				max-width: 250px
+				flex: 0 0 auto
+				max-width: none
 				max-height: none
+				img
+					height: auto
 			.product-list__content
 				flex-direction: column
 				align-items: stretch
-				padding: 5px 10px 10px
+				padding: 10px 15px 15px
 			.product-list__title
 				flex: 0 0 auto
 				width: 100%
@@ -867,10 +861,11 @@
 				border: 0
 				border-top: 1px solid $light-gray
 			.product-list__bottom
+				align-self: auto
 				margin: 0
-				padding: 5px 80px 0 0
+				padding: 20px 80px 0 0
 			.product-list__row
-				margin: 0
+				margin-bottom: 7px
 			.product-list__cart
 				bottom: 0
 				transform: none
@@ -878,6 +873,15 @@
 				font-size: 30px
 			.product-list__price-old
 				font-size: 16px
+			.product-list__buy
+				position: static
+				right: auto
+				bottom: auto
+				margin: 15px -25px -15px
+				padding: 15px
+				background-color: $light-gray
+				&:hover
+					background-color: $porcelain
 
 	.cart
 		&__step
@@ -1019,6 +1023,8 @@
 			max-height: none
 		&.list, &.line
 			.product-list__item
+				width: 100%
+				margin-right: 0
 				flex-direction: column
 			.product-list__img-wrap
 				flex: 0 0 auto
@@ -1032,6 +1038,10 @@
 				margin-bottom: 5px
 			.product-list__bottom
 				padding-top: 20px
+			&.list
+				.product-list__buy
+					margin-left: -25px
+					margin-bottom: -15px
 
 	.cart
 		&__modal
