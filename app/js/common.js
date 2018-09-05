@@ -446,8 +446,6 @@ jQuery(document).ready(function($) {
   function checkForm() {
     $(".cart-form").validate({
     messages: {
-      spare: "Это поле обязательное",
-      spare_2: "Это поле обязательное",
       name: "Введите Ваше имя",
       email: "Введите Ваш E-mail",
       phone: "Введите Ваш телефон",
